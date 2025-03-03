@@ -12,6 +12,10 @@
 # Node
 node_modules
 
+# Docfx
+_site
+docs/api
+
 # Build results
 
 [Dd]ebug/

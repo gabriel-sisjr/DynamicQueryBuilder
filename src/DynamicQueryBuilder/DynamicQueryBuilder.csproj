@@ -6,4 +6,19 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>bin\Debug\net8.0\DynamicQueryBuilder.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>bin\Debug\net9.0\DynamicQueryBuilder.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <NoWarn>1591</NoWarn> <!-- Suppresses missing XML comments warnings -->
+    </PropertyGroup>
+
+
 </Project>
