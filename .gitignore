@@ -9,6 +9,9 @@
 # Jetbrains
 .idea
 
+# Node
+node_modules
+
 # Build results
 
 [Dd]ebug/
