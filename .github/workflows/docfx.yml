@@ -3,10 +3,10 @@ name: Build and Deploy DocFX
 on:
   push:
     branches:
-      - develop # TODO: Change to main in a future.
+      - develop # TODO: Change to main in the future.
   pull_request:
     branches:
-      - develop # TODO: Change to main in a future.
+      - develop # TODO: Change to main in the future.
 
 permissions:
   contents: write
@@ -19,10 +19,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: Setup .NET (8 & 9)
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: ["8.0.x", "9.0.x"]
+          dotnet-version: |
+            8.0.x
+            9.0.x
 
       - name: Install DocFX
         run: dotnet tool install -g docfx
