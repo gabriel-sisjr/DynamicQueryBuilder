@@ -1,0 +1,61 @@
+name: Build and Deploy DocFX
+
+on:
+  push:
+    branches:
+      - develop # TODO: Change to main in a future.
+  pull_request:
+    branches:
+      - develop # TODO: Change to main in a future.
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ["8.0.x", "9.0.x"]
+
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build Documentation
+        run: docfx docfx.json
+
+      - name: Upload Artifact (for debugging)
+        uses: actions/upload-artifact@v3
+        with:
+          name: docfx-site
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download Built Docs
+        uses: actions/download-artifact@v3
+        with:
+          name: docfx-site
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: _site
+          clean: true
