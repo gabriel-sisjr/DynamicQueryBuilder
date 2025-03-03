@@ -1,0 +1,31 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: DynamicQueryBuilder
+  name: DynamicQueryBuilder
+  href: docs/api/DynamicQueryBuilder.html
+  commentId: N:DynamicQueryBuilder
+  fullName: DynamicQueryBuilder
+  nameWithType: DynamicQueryBuilder
+- uid: DynamicQueryBuilder.Class1
+  name: Class1
+  href: docs/api/DynamicQueryBuilder.Class1.html
+  commentId: T:DynamicQueryBuilder.Class1
+  fullName: DynamicQueryBuilder.Class1
+  nameWithType: Class1
+- uid: DynamicQueryBuilder.Class1.SumItems(System.Int32[])
+  name: SumItems(params int[])
+  href: docs/api/DynamicQueryBuilder.Class1.html#DynamicQueryBuilder_Class1_SumItems_System_Int32___
+  commentId: M:DynamicQueryBuilder.Class1.SumItems(System.Int32[])
+  name.vb: SumItems(ParamArray Integer())
+  fullName: DynamicQueryBuilder.Class1.SumItems(params int[])
+  fullName.vb: DynamicQueryBuilder.Class1.SumItems(ParamArray Integer())
+  nameWithType: Class1.SumItems(params int[])
+  nameWithType.vb: Class1.SumItems(ParamArray Integer())
+- uid: DynamicQueryBuilder.Class1.SumItems*
+  name: SumItems
+  href: docs/api/DynamicQueryBuilder.Class1.html#DynamicQueryBuilder_Class1_SumItems_
+  commentId: Overload:DynamicQueryBuilder.Class1.SumItems
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Class1.SumItems
+  nameWithType: Class1.SumItems

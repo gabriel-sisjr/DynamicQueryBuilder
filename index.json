@@ -1,0 +1,27 @@
+{
+  "docs/api/DynamicQueryBuilder.Class1.html": {
+    "href": "docs/api/DynamicQueryBuilder.Class1.html",
+    "title": "Class Class1",
+    "summary": "Class Class1 Namespace DynamicQueryBuilder Assembly DynamicQueryBuilder.dll Class Summary Test public class Class1 Inheritance object Class1 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods SumItems(params int[]) Method to Sum all items from params. public int SumItems(params int[] values) Parameters values int[] Items to be summ. Returns int The total value of summ."
+  },
+  "docs/api/DynamicQueryBuilder.html": {
+    "href": "docs/api/DynamicQueryBuilder.html",
+    "title": "Namespace DynamicQueryBuilder",
+    "summary": "Namespace DynamicQueryBuilder Classes Class1 Class Summary Test"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE.",
+    "summary": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}
