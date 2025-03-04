@@ -1,4 +1,6 @@
 using DynamicQueryBuilder;
+using DynamicQueryBuilder.Models.Enums.Helpers.Databases;
+using DynamicQueryBuilder.Models.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,8 +10,9 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddDynamicQueryBuilder(builder.Configuration.GetConnectionString("DynamicQueryBuilder")
-    ?? throw new InvalidOperationException("Connection string not found."));
+var settings = new DynamicQueryBuilderSettings(builder.Configuration.GetConnectionString("DynamicQueryBuilder")!,
+    DatabaseDriver.POSTGRESQL);
+builder.Services.AddDynamicQueryBuilder(settings);
 
 var app = builder.Build();
 
