@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Class1 </title>
+      <title>Class DynamicQueryBuilderModule </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Class1 ">
+      <meta name="title" content="Class DynamicQueryBuilderModule ">
       
-      <meta name="description" content="Class Summary Test">
+      <meta name="description" content="Module for adding Dynamic Query Builder services.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/develop/apiSpec/new?filename=DynamicQueryBuilder_Class1.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.Class1%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/3/merge/apiSpec/new?filename=DynamicQueryBuilder_DynamicQueryBuilderModule.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.DynamicQueryBuilderModule%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="DynamicQueryBuilder.Class1">
+        <article data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule">
 
 
 
-  <h1 id="DynamicQueryBuilder_Class1" data-uid="DynamicQueryBuilder.Class1" class="text-break">
-Class Class1  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Class1.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h1 id="DynamicQueryBuilder_DynamicQueryBuilderModule" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule" class="text-break">
+Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/3/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class Class1  <a class="header-action link-secondary" title="View source" href="
   <dl><dt>Assembly</dt><dd>DynamicQueryBuilder.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Class Summary Test</p>
+  <div class="markdown summary"><p>Module for adding Dynamic Query Builder services.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Class1</code></pre>
+    <pre><code class="lang-csharp hljs">public static class DynamicQueryBuilderModule</code></pre>
   </div>
 
 
@@ -112,7 +112,7 @@ Class Class1  <a class="header-action link-secondary" title="View source" href="
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Class1</span></div>
+      <div><span class="xref">DynamicQueryBuilderModule</span></div>
     </dd>
   </dl>
 
@@ -153,32 +153,35 @@ Class Class1  <a class="header-action link-secondary" title="View source" href="
 </h2>
 
 
-  <a id="DynamicQueryBuilder_Class1_SumItems_" data-uid="DynamicQueryBuilder.Class1.SumItems*"></a>
+  <a id="DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder*"></a>
 
-  <h3 id="DynamicQueryBuilder_Class1_SumItems_System_Int32___" data-uid="DynamicQueryBuilder.Class1.SumItems(System.Int32[])">
-  SumItems(params int[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Class1.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+  AddDynamicQueryBuilder(IServiceCollection, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/3/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Method to Sum all items from params.</p>
+  <div class="markdown level1 summary"><p>Adds Dynamic Query Builder services to the service collection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int SumItems(params int[] values)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddDynamicQueryBuilder(this IServiceCollection services, string connectionString)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
-    <dd><p>Items to be summ.</p>
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection.</p>
+</dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The connection string.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The total value of summ.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The service collection.</p>
 </dd>
   </dl>
 
@@ -196,7 +199,7 @@ Class Class1  <a class="header-action link-secondary" title="View source" href="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Class1.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/3/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

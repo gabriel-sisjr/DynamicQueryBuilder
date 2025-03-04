@@ -7,25 +7,268 @@ references:
   commentId: N:DynamicQueryBuilder
   fullName: DynamicQueryBuilder
   nameWithType: DynamicQueryBuilder
-- uid: DynamicQueryBuilder.Class1
-  name: Class1
-  href: docs/api/DynamicQueryBuilder.Class1.html
-  commentId: T:DynamicQueryBuilder.Class1
-  fullName: DynamicQueryBuilder.Class1
-  nameWithType: Class1
-- uid: DynamicQueryBuilder.Class1.SumItems(System.Int32[])
-  name: SumItems(params int[])
-  href: docs/api/DynamicQueryBuilder.Class1.html#DynamicQueryBuilder_Class1_SumItems_System_Int32___
-  commentId: M:DynamicQueryBuilder.Class1.SumItems(System.Int32[])
-  name.vb: SumItems(ParamArray Integer())
-  fullName: DynamicQueryBuilder.Class1.SumItems(params int[])
-  fullName.vb: DynamicQueryBuilder.Class1.SumItems(ParamArray Integer())
-  nameWithType: Class1.SumItems(params int[])
-  nameWithType.vb: Class1.SumItems(ParamArray Integer())
-- uid: DynamicQueryBuilder.Class1.SumItems*
-  name: SumItems
-  href: docs/api/DynamicQueryBuilder.Class1.html#DynamicQueryBuilder_Class1_SumItems_
-  commentId: Overload:DynamicQueryBuilder.Class1.SumItems
+- uid: DynamicQueryBuilder.Databases
+  name: DynamicQueryBuilder.Databases
+  href: docs/api/DynamicQueryBuilder.Databases.html
+  commentId: N:DynamicQueryBuilder.Databases
+  fullName: DynamicQueryBuilder.Databases
+  nameWithType: DynamicQueryBuilder.Databases
+- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData
+  name: GetDatabaseMetaData
+  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html
+  commentId: T:DynamicQueryBuilder.Databases.GetDatabaseMetaData
+  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData
+  nameWithType: GetDatabaseMetaData
+- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor(System.String)
+  name: GetDatabaseMetaData(string)
+  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData__ctor_System_String_
+  commentId: M:DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor(System.String)
+  name.vb: New(String)
+  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseMetaData(string)
+  fullName.vb: DynamicQueryBuilder.Databases.GetDatabaseMetaData.New(String)
+  nameWithType: GetDatabaseMetaData.GetDatabaseMetaData(string)
+  nameWithType.vb: GetDatabaseMetaData.New(String)
+- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor*
+  name: GetDatabaseMetaData
+  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData__ctor_
+  commentId: Overload:DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor
   isSpec: "True"
-  fullName: DynamicQueryBuilder.Class1.SumItems
-  nameWithType: Class1.SumItems
+  name.vb: New
+  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseMetaData
+  fullName.vb: DynamicQueryBuilder.Databases.GetDatabaseMetaData.New
+  nameWithType: GetDatabaseMetaData.GetDatabaseMetaData
+  nameWithType.vb: GetDatabaseMetaData.New
+- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  name: GetDatabaseTablesMetaDataAsync(DatabaseDriver)
+  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_
+  commentId: M:DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  nameWithType: GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver)
+- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync*
+  name: GetDatabaseTablesMetaDataAsync
+  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_
+  commentId: Overload:DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  nameWithType: GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+- uid: DynamicQueryBuilder.Drivers
+  name: DynamicQueryBuilder.Drivers
+  href: docs/api/DynamicQueryBuilder.Drivers.html
+  commentId: N:DynamicQueryBuilder.Drivers
+  fullName: DynamicQueryBuilder.Drivers
+  nameWithType: DynamicQueryBuilder.Drivers
+- uid: DynamicQueryBuilder.Drivers.DriversFactory
+  name: DriversFactory
+  href: docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html
+  commentId: T:DynamicQueryBuilder.Drivers.DriversFactory
+  fullName: DynamicQueryBuilder.Drivers.DriversFactory
+  nameWithType: DriversFactory
+- uid: DynamicQueryBuilder.Drivers.DriversFactory.GetDatabaseConnection(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver,System.String)
+  name: GetDatabaseConnection(DatabaseDriver, string)
+  href: docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html#DynamicQueryBuilder_Drivers_DriversFactory_GetDatabaseConnection_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_System_String_
+  commentId: M:DynamicQueryBuilder.Drivers.DriversFactory.GetDatabaseConnection(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver,System.String)
+  name.vb: GetDatabaseConnection(DatabaseDriver, String)
+  fullName: DynamicQueryBuilder.Drivers.DriversFactory.GetDatabaseConnection(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver, string)
+  fullName.vb: DynamicQueryBuilder.Drivers.DriversFactory.GetDatabaseConnection(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver, String)
+  nameWithType: DriversFactory.GetDatabaseConnection(DatabaseDriver, string)
+  nameWithType.vb: DriversFactory.GetDatabaseConnection(DatabaseDriver, String)
+- uid: DynamicQueryBuilder.Drivers.DriversFactory.GetDatabaseConnection*
+  name: GetDatabaseConnection
+  href: docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html#DynamicQueryBuilder_Drivers_DriversFactory_GetDatabaseConnection_
+  commentId: Overload:DynamicQueryBuilder.Drivers.DriversFactory.GetDatabaseConnection
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Drivers.DriversFactory.GetDatabaseConnection
+  nameWithType: DriversFactory.GetDatabaseConnection
+- uid: DynamicQueryBuilder.Drivers.DriversFactory.GetMetadataQuery(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  name: GetMetadataQuery(DatabaseDriver)
+  href: docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html#DynamicQueryBuilder_Drivers_DriversFactory_GetMetadataQuery_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_
+  commentId: M:DynamicQueryBuilder.Drivers.DriversFactory.GetMetadataQuery(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  fullName: DynamicQueryBuilder.Drivers.DriversFactory.GetMetadataQuery(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  nameWithType: DriversFactory.GetMetadataQuery(DatabaseDriver)
+- uid: DynamicQueryBuilder.Drivers.DriversFactory.GetMetadataQuery*
+  name: GetMetadataQuery
+  href: docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html#DynamicQueryBuilder_Drivers_DriversFactory_GetMetadataQuery_
+  commentId: Overload:DynamicQueryBuilder.Drivers.DriversFactory.GetMetadataQuery
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Drivers.DriversFactory.GetMetadataQuery
+  nameWithType: DriversFactory.GetMetadataQuery
+- uid: DynamicQueryBuilder.DynamicQueryBuilderModule
+  name: DynamicQueryBuilderModule
+  href: docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html
+  commentId: T:DynamicQueryBuilder.DynamicQueryBuilderModule
+  fullName: DynamicQueryBuilder.DynamicQueryBuilderModule
+  nameWithType: DynamicQueryBuilderModule
+- uid: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  name: AddDynamicQueryBuilder(IServiceCollection, string)
+  href: docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html#DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  commentId: M:DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  name.vb: AddDynamicQueryBuilder(IServiceCollection, String)
+  fullName: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection, string)
+  fullName.vb: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
+  nameWithType: DynamicQueryBuilderModule.AddDynamicQueryBuilder(IServiceCollection, string)
+  nameWithType.vb: DynamicQueryBuilderModule.AddDynamicQueryBuilder(IServiceCollection, String)
+- uid: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder*
+  name: AddDynamicQueryBuilder
+  href: docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html#DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_
+  commentId: Overload:DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder
+  nameWithType: DynamicQueryBuilderModule.AddDynamicQueryBuilder
+- uid: DynamicQueryBuilder.Interfaces.Helpers
+  name: DynamicQueryBuilder.Interfaces.Helpers
+  href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.html
+  commentId: N:DynamicQueryBuilder.Interfaces.Helpers
+  fullName: DynamicQueryBuilder.Interfaces.Helpers
+  nameWithType: DynamicQueryBuilder.Interfaces.Helpers
+- uid: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData
+  name: IGetDatabaseMetaData
+  href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html
+  commentId: T:DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData
+  fullName: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData
+  nameWithType: IGetDatabaseMetaData
+- uid: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  name: GetDatabaseTablesMetaDataAsync(DatabaseDriver)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html#DynamicQueryBuilder_Interfaces_Helpers_IGetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_
+  commentId: M:DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  fullName: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  nameWithType: IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver)
+- uid: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync*
+  name: GetDatabaseTablesMetaDataAsync
+  href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html#DynamicQueryBuilder_Interfaces_Helpers_IGetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  nameWithType: IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+- uid: DynamicQueryBuilder.Models.Enums.Helpers.Databases
+  name: DynamicQueryBuilder.Models.Enums.Helpers.Databases
+  href: docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.html
+  commentId: N:DynamicQueryBuilder.Models.Enums.Helpers.Databases
+  fullName: DynamicQueryBuilder.Models.Enums.Helpers.Databases
+  nameWithType: DynamicQueryBuilder.Models.Enums.Helpers.Databases
+- uid: DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver
+  name: DatabaseDriver
+  href: docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver
+  fullName: DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver
+  nameWithType: DatabaseDriver
+- uid: DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.MYSQL
+  name: MYSQL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html#DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_MYSQL
+  commentId: F:DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.MYSQL
+  fullName: DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.MYSQL
+  nameWithType: DatabaseDriver.MYSQL
+- uid: DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.POSTGRESQL
+  name: POSTGRESQL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html#DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_POSTGRESQL
+  commentId: F:DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.POSTGRESQL
+  fullName: DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.POSTGRESQL
+  nameWithType: DatabaseDriver.POSTGRESQL
+- uid: DynamicQueryBuilder.Models.Helpers
+  name: DynamicQueryBuilder.Models.Helpers
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.html
+  commentId: N:DynamicQueryBuilder.Models.Helpers
+  fullName: DynamicQueryBuilder.Models.Helpers
+  nameWithType: DynamicQueryBuilder.Models.Helpers
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData
+  name: DatabaseTablesMetaData
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html
+  commentId: T:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData
+  nameWithType: DatabaseTablesMetaData
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)
+  name: DatabaseTablesMetaData(string, string, string?, string?, string?, string?)
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData__ctor_System_String_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)
+  name.vb: New(String, String, String, String, String, String)
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.DatabaseTablesMetaData(string, string, string?, string?, string?, string?)
+  fullName.vb: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.New(String, String, String, String, String, String)
+  nameWithType: DatabaseTablesMetaData.DatabaseTablesMetaData(string, string, string?, string?, string?, string?)
+  nameWithType.vb: DatabaseTablesMetaData.New(String, String, String, String, String, String)
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.#ctor*
+  name: DatabaseTablesMetaData
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData__ctor_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.DatabaseTablesMetaData
+  fullName.vb: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.New
+  nameWithType: DatabaseTablesMetaData.DatabaseTablesMetaData
+  nameWithType.vb: DatabaseTablesMetaData.New
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.Column
+  name: Column
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_Column
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.Column
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.Column
+  nameWithType: DatabaseTablesMetaData.Column
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.Column*
+  name: Column
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_Column_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.Column
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.Column
+  nameWithType: DatabaseTablesMetaData.Column
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.ColumnType
+  name: ColumnType
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_ColumnType
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.ColumnType
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.ColumnType
+  nameWithType: DatabaseTablesMetaData.ColumnType
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.ColumnType*
+  name: ColumnType
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_ColumnType_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.ColumnType
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.ColumnType
+  nameWithType: DatabaseTablesMetaData.ColumnType
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.PrimaryKey
+  name: PrimaryKey
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_PrimaryKey
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.PrimaryKey
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.PrimaryKey
+  nameWithType: DatabaseTablesMetaData.PrimaryKey
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.PrimaryKey*
+  name: PrimaryKey
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_PrimaryKey_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.PrimaryKey
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.PrimaryKey
+  nameWithType: DatabaseTablesMetaData.PrimaryKey
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedColumn
+  name: RelatedColumn
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_RelatedColumn
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedColumn
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedColumn
+  nameWithType: DatabaseTablesMetaData.RelatedColumn
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedColumn*
+  name: RelatedColumn
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_RelatedColumn_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedColumn
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedColumn
+  nameWithType: DatabaseTablesMetaData.RelatedColumn
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedSchema
+  name: RelatedSchema
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_RelatedSchema
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedSchema
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedSchema
+  nameWithType: DatabaseTablesMetaData.RelatedSchema
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedSchema*
+  name: RelatedSchema
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_RelatedSchema_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedSchema
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedSchema
+  nameWithType: DatabaseTablesMetaData.RelatedSchema
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedTable
+  name: RelatedTable
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_RelatedTable
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedTable
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedTable
+  nameWithType: DatabaseTablesMetaData.RelatedTable
+- uid: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedTable*
+  name: RelatedTable
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html#DynamicQueryBuilder_Models_Helpers_DatabaseTablesMetaData_RelatedTable_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedTable
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedTable
+  nameWithType: DatabaseTablesMetaData.RelatedTable

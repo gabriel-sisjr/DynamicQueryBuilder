@@ -22,17 +22,157 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docs/api/DynamicQueryBuilder.Class1.yml",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.yml",
       "output": {
         ".html": {
-          "relative_path": "docs/api/DynamicQueryBuilder.Class1.html"
+          "relative_path": "docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "DynamicQueryBuilder.Class1",
-      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Class1.yml\" sourcestartlinenumber=\"1\">Class Summary Test</p>\n"
+      "Title": "DynamicQueryBuilder.Databases.GetDatabaseMetaData",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.yml\" sourcestartlinenumber=\"1\">Get the metadata of the database tables.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Databases.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Databases.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Databases",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Drivers.DriversFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Drivers.DriversFactory",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Drivers.DriversFactory.yml\" sourcestartlinenumber=\"1\">Factory class for creating database connections and metadata queries.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Drivers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Drivers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Drivers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.DynamicQueryBuilderModule",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.yml\" sourcestartlinenumber=\"1\">Module for adding Dynamic Query Builder services.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.yml\" sourcestartlinenumber=\"1\">Interface for getting database metadata.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Helpers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Interfaces.Helpers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.yml\" sourcestartlinenumber=\"1\">Supported drivers to get tables metadata.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.Helpers.Databases",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.yml\" sourcestartlinenumber=\"1\">Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Helpers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Helpers",
+      "Summary": null
     },
     {
       "type": "ManagedReference",

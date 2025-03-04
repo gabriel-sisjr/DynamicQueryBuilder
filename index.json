@@ -4,15 +4,65 @@
     "title": "\uD83D\uDCDC Commercial License for DynamicQueryBuilder",
     "summary": "\uD83D\uDCDC Commercial License for DynamicQueryBuilder If you want to use DynamicQueryBuilder in a closed-source commercial project, you must obtain a commercial license. \uD83D\uDD39 When do you need a commercial license? If you are using DynamicQueryBuilder in a for-profit product or service. If you do not want to release your source code under AGPL. If you are distributing it as part of a SaaS or cloud-based platform. \uD83D\uDCB0 How to Obtain a License? Please contact **gabriel.sistemasjr@gmail.com** to discuss pricing and licensing terms."
   },
-  "docs/api/DynamicQueryBuilder.Class1.html": {
-    "href": "docs/api/DynamicQueryBuilder.Class1.html",
-    "title": "Class Class1",
-    "summary": "Class Class1 Namespace DynamicQueryBuilder Assembly DynamicQueryBuilder.dll Class Summary Test public class Class1 Inheritance object Class1 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods SumItems(params int[]) Method to Sum all items from params. public int SumItems(params int[] values) Parameters values int[] Items to be summ. Returns int The total value of summ."
+  "docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html": {
+    "href": "docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html",
+    "title": "Class GetDatabaseMetaData",
+    "summary": "Class GetDatabaseMetaData Namespace DynamicQueryBuilder.Databases Assembly DynamicQueryBuilder.dll Get the metadata of the database tables. public sealed class GetDatabaseMetaData : IGetDatabaseMetaData Inheritance object GetDatabaseMetaData Implements IGetDatabaseMetaData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.ReferenceEquals(object, object) object.ToString() Constructors GetDatabaseMetaData(string) Get the metadata of the database tables. public GetDatabaseMetaData(string connectionString) Parameters connectionString string Methods GetDatabaseTablesMetaDataAsync(DatabaseDriver) Get the metadata of the database tables. public Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>> GetDatabaseTablesMetaDataAsync(DatabaseDriver driver) Parameters driver DatabaseDriver The database driver. Returns Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>> A dictionary of schemas and tables with their metadata. Exceptions InvalidOperationException Thrown when unable to create a command."
+  },
+  "docs/api/DynamicQueryBuilder.Databases.html": {
+    "href": "docs/api/DynamicQueryBuilder.Databases.html",
+    "title": "Namespace DynamicQueryBuilder.Databases",
+    "summary": "Namespace DynamicQueryBuilder.Databases Classes GetDatabaseMetaData Get the metadata of the database tables."
+  },
+  "docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html": {
+    "href": "docs/api/DynamicQueryBuilder.Drivers.DriversFactory.html",
+    "title": "Class DriversFactory",
+    "summary": "Class DriversFactory Namespace DynamicQueryBuilder.Drivers Assembly DynamicQueryBuilder.dll Factory class for creating database connections and metadata queries. public static class DriversFactory Inheritance object DriversFactory Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetDatabaseConnection(DatabaseDriver, string) Get a database connection. public static IDbConnection GetDatabaseConnection(DatabaseDriver driver, string connectionString) Parameters driver DatabaseDriver The database driver. connectionString string The connection string. Returns IDbConnection A database connection. GetMetadataQuery(DatabaseDriver) Get the metadata query for a database driver. public static string GetMetadataQuery(DatabaseDriver driver) Parameters driver DatabaseDriver The database driver. Returns string The metadata query."
+  },
+  "docs/api/DynamicQueryBuilder.Drivers.html": {
+    "href": "docs/api/DynamicQueryBuilder.Drivers.html",
+    "title": "Namespace DynamicQueryBuilder.Drivers",
+    "summary": "Namespace DynamicQueryBuilder.Drivers Classes DriversFactory Factory class for creating database connections and metadata queries."
+  },
+  "docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html": {
+    "href": "docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html",
+    "title": "Class DynamicQueryBuilderModule",
+    "summary": "Class DynamicQueryBuilderModule Namespace DynamicQueryBuilder Assembly DynamicQueryBuilder.dll Module for adding Dynamic Query Builder services. public static class DynamicQueryBuilderModule Inheritance object DynamicQueryBuilderModule Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods AddDynamicQueryBuilder(IServiceCollection, string) Adds Dynamic Query Builder services to the service collection. public static IServiceCollection AddDynamicQueryBuilder(this IServiceCollection services, string connectionString) Parameters services IServiceCollection The service collection. connectionString string The connection string. Returns IServiceCollection The service collection."
+  },
+  "docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html": {
+    "href": "docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html",
+    "title": "Interface IGetDatabaseMetaData",
+    "summary": "Interface IGetDatabaseMetaData Namespace DynamicQueryBuilder.Interfaces.Helpers Assembly DynamicQueryBuilder.dll Interface for getting database metadata. public interface IGetDatabaseMetaData Methods GetDatabaseTablesMetaDataAsync(DatabaseDriver) Get the metadata of the database tables. Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>> GetDatabaseTablesMetaDataAsync(DatabaseDriver driver) Parameters driver DatabaseDriver The database driver. Returns Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>> A dictionary of schemas and tables with their metadata. Exceptions InvalidOperationException Thrown when unable to create a command."
+  },
+  "docs/api/DynamicQueryBuilder.Interfaces.Helpers.html": {
+    "href": "docs/api/DynamicQueryBuilder.Interfaces.Helpers.html",
+    "title": "Namespace DynamicQueryBuilder.Interfaces.Helpers",
+    "summary": "Namespace DynamicQueryBuilder.Interfaces.Helpers Interfaces IGetDatabaseMetaData Interface for getting database metadata."
+  },
+  "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html": {
+    "href": "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html",
+    "title": "Enum DatabaseDriver",
+    "summary": "Enum DatabaseDriver Namespace DynamicQueryBuilder.Models.Enums.Helpers.Databases Assembly DynamicQueryBuilder.dll Supported drivers to get tables metadata. public enum DatabaseDriver Fields MYSQL = 1 MySQL driver. POSTGRESQL = 0 PostgreSQL driver."
+  },
+  "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.html": {
+    "href": "docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.html",
+    "title": "Namespace DynamicQueryBuilder.Models.Enums.Helpers.Databases",
+    "summary": "Namespace DynamicQueryBuilder.Models.Enums.Helpers.Databases Enums DatabaseDriver Supported drivers to get tables metadata."
+  },
+  "docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html": {
+    "href": "docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html",
+    "title": "Class DatabaseTablesMetaData",
+    "summary": "Class DatabaseTablesMetaData Namespace DynamicQueryBuilder.Models.Helpers Assembly DynamicQueryBuilder.dll Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships. public record DatabaseTablesMetaData : IEquatable<DatabaseTablesMetaData> Inheritance object DatabaseTablesMetaData Implements IEquatable<DatabaseTablesMetaData> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors DatabaseTablesMetaData(string, string, string?, string?, string?, string?) Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships. public DatabaseTablesMetaData(string Column, string ColumnType, string? PrimaryKey, string? RelatedSchema, string? RelatedTable, string? RelatedColumn) Parameters Column string The name of the column in the table. ColumnType string The data type of the column. PrimaryKey string The name of the primary key column if applicable; otherwise, null. RelatedSchema string The schema of the related table if there is a foreign key relationship; otherwise, null. RelatedTable string The name of the related table if there is a foreign key relationship; otherwise, null. RelatedColumn string The name of the related column if there is a foreign key relationship; otherwise, null. Properties Column The name of the column in the table. public string Column { get; init; } Property Value string ColumnType The data type of the column. public string ColumnType { get; init; } Property Value string PrimaryKey The name of the primary key column if applicable; otherwise, null. public string? PrimaryKey { get; init; } Property Value string RelatedColumn The name of the related column if there is a foreign key relationship; otherwise, null. public string? RelatedColumn { get; init; } Property Value string RelatedSchema The schema of the related table if there is a foreign key relationship; otherwise, null. public string? RelatedSchema { get; init; } Property Value string RelatedTable The name of the related table if there is a foreign key relationship; otherwise, null. public string? RelatedTable { get; init; } Property Value string"
+  },
+  "docs/api/DynamicQueryBuilder.Models.Helpers.html": {
+    "href": "docs/api/DynamicQueryBuilder.Models.Helpers.html",
+    "title": "Namespace DynamicQueryBuilder.Models.Helpers",
+    "summary": "Namespace DynamicQueryBuilder.Models.Helpers Classes DatabaseTablesMetaData Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships."
   },
   "docs/api/DynamicQueryBuilder.html": {
     "href": "docs/api/DynamicQueryBuilder.html",
     "title": "Namespace DynamicQueryBuilder",
-    "summary": "Namespace DynamicQueryBuilder Classes Class1 Class Summary Test"
+    "summary": "Namespace DynamicQueryBuilder Classes DynamicQueryBuilderModule Module for adding Dynamic Query Builder services."
   },
   "docs/getting-started.html": {
     "href": "docs/getting-started.html",
