@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started </title>
+      <title>&#128230; Installation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started ">
+      <meta name="title" content="&#128230; Installation ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/docs/getting-started.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/4/merge/docs/getting-started.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,13 +85,113 @@
         </div>
 
         <article data-uid="">
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="-installation">📦 Installation</h1>
 
+<p>Install the package via NuGet Package Manager:</p>
+<pre><code class="lang-bash">PM&gt; Install-Package DynamicQueryBuilder
+</code></pre>
+<p>Or using .NET CLI:</p>
+<pre><code class="lang-bash">dotnet add package DynamicQueryBuilder
+</code></pre>
+<h1 id="-usage">🛠 Usage</h1>
+<h2 id="setting-up-dynamicquerybuilder">Setting Up DynamicQueryBuilder</h2>
+<ol>
+<li>Add DynamicQueryBuilder to your services in <code>Program.cs</code>:</li>
+</ol>
+<pre><code class="lang-csharp">var databaseConnectionString = builder.Configuration.GetConnectionString(&quot;YourConnectionString&quot;);
+builder.Services.AddDynamicQueryBuilder(databaseConnectionString);
+</code></pre>
+<ol start="2">
+<li>Inject and use the service in your code:</li>
+</ol>
+<pre><code class="lang-csharp">public class YourController : ControllerBase
+{
+    private readonly IGetDatabaseMetaData _getDatabaseMetaData;
+
+    public YourController(IGetDatabaseMetaData getDatabaseMetaData)
+    {
+        _getDatabaseMetaData = getDatabaseMetaData;
+    }
+
+    /*
+    * This method will return your schema tables metadata.
+    */
+    public async Task&lt;IActionResult&gt; GetDatabaseMetadata()
+    {
+        var metadata = await _getDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver.POSTGRESQL); // See available drivers.
+        return Ok(metadata);
+    }
+}
+</code></pre>
+<h2 id="method-response">Method Response</h2>
+<p>The method returns a structured JSON containing information about various entities in the system. Each table is organized within a <code>public</code> object, and each contains an array of columns, where each column provides details such as:</p>
+<ul>
+<li><strong>Column name (<code>column</code>)</strong></li>
+<li><strong>Data type (<code>columnType</code>)</strong></li>
+<li><strong>Primary key status (<code>primaryKey</code>)</strong></li>
+<li><strong>Relationships with other tables (<code>relatedSchema</code>, <code>relatedTable</code>, <code>relatedColumn</code>)</strong></li>
+</ul>
+<h3 id="example-of-returned-structure">Example of Returned Structure:</h3>
+<pre><code class="lang-json">{
+  &quot;public&quot;: {
+    &quot;EXAMPLE_TABLE&quot;: [
+      {
+        &quot;column&quot;: &quot;ID&quot;,
+        &quot;columnType&quot;: &quot;bigint&quot;,
+        &quot;primaryKey&quot;: &quot;nextval('\&quot;EXAMPLE_TABLE_ID_seq\&quot;'::regclass)&quot;,
+        &quot;relatedSchema&quot;: null,
+        &quot;relatedTable&quot;: null,
+        &quot;relatedColumn&quot;: null
+      },
+      {
+        &quot;column&quot;: &quot;NAME&quot;,
+        &quot;columnType&quot;: &quot;character varying&quot;,
+        &quot;primaryKey&quot;: null,
+        &quot;relatedSchema&quot;: null,
+        &quot;relatedTable&quot;: null,
+        &quot;relatedColumn&quot;: null
+      },
+      {
+        &quot;column&quot;: &quot;RELATED_ID&quot;,
+        &quot;columnType&quot;: &quot;bigint&quot;,
+        &quot;primaryKey&quot;: null,
+        &quot;relatedSchema&quot;: &quot;public&quot;,
+        &quot;relatedTable&quot;: &quot;ANOTHER_TABLE&quot;,
+        &quot;relatedColumn&quot;: &quot;ID&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h2 id="building-queries">Building Queries</h2>
+<h3 id="basic-select-query">Basic SELECT Query</h3>
+<pre><code class="lang-csharp">var query = queryBuilder
+    .FromTable(&quot;Users&quot;)
+    .Columns(&quot;Id&quot;, &quot;Name&quot;, &quot;Email&quot;)
+    .GenerateSql();
+// Output: SELECT Id, Name, Email FROM USERS
+</code></pre>
+<h3 id="adding-where-filters">Adding WHERE Filters</h3>
+<pre><code class="lang-csharp">var query = queryBuilder
+    .FromTable(&quot;Users&quot;)
+    .Columns(&quot;Id&quot;, &quot;Name&quot;)
+    .FilterBy(&quot;Age&quot;, ComparisonOperators.GREATER_THAN, &quot;18&quot;)
+    .GenerateSql();
+// Output: SELECT Id, Name FROM USERS WHERE Age &gt; 18
+</code></pre>
+<h3 id="using-joins">Using JOINs</h3>
+<pre><code class="lang-csharp">var query = queryBuilder
+    .FromTable(&quot;Users&quot;)
+    .Columns(&quot;Users.Id&quot;, &quot;Users.Name&quot;, &quot;Orders.TotalAmount&quot;)
+    .Join(JoinOperators.INNER_JOIN, &quot;Orders&quot;, &quot;Users.Id = Orders.UserId&quot;)
+    .GenerateSql();
+// Output: SELECT Users.Id, Users.Name, Orders.TotalAmount FROM USERS INNER JOIN Orders ON Users.Id = Orders.UserId
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/4/merge/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
