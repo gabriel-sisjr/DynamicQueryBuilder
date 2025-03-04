@@ -19,8 +19,8 @@ dotnet add package DynamicQueryBuilder
 1. Add DynamicQueryBuilder to your services in `Program.cs`:
 
 ```csharp
-var databaseConnectionString = builder.Configuration.GetConnectionString("YourConnectionString");
-builder.Services.AddDynamicQueryBuilder(databaseConnectionString);
+var settings = new DynamicQueryBuilderSettings("Your connection string", DatabaseDriver.POSTGRESQL); // See available drivers.
+builder.Services.AddDynamicQueryBuilder(settings);
 ```
 
 2. Inject and use the service in your code:
@@ -40,7 +40,7 @@ public class YourController : ControllerBase
     */
     public async Task<IActionResult> GetDatabaseMetadata()
     {
-        var metadata = await _getDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver.POSTGRESQL); // See available drivers.
+        var metadata = await _getDatabaseMetaData.GetDatabaseTablesMetaDataAsync();
         return Ok(metadata);
     }
 }
@@ -48,7 +48,7 @@ public class YourController : ControllerBase
 
 ## Method Response
 
-The method returns a structured JSON containing information about various entities in the system. Each table is organized within a `public` object, and each contains an array of columns, where each column provides details such as:
+The method returns a structured JSON containing information about various entities in the system. Each table is organized based in the schema, and each contains an array of columns, where each column provides details such as:
 
 - **Column name (`column`)**
 - **Data type (`columnType`)**
@@ -56,9 +56,10 @@ The method returns a structured JSON containing information about various entiti
 - **Relationships with other tables (`relatedSchema`, `relatedTable`, `relatedColumn`)**
 
 ### Example of Returned Structure:
+
 ```json
 {
-  "public": {
+  "SCHEMA_NAME": {
     "EXAMPLE_TABLE": [
       {
         "column": "ID",
@@ -88,7 +89,6 @@ The method returns a structured JSON containing information about various entiti
   }
 }
 ```
-
 
 ## Building Queries
 
