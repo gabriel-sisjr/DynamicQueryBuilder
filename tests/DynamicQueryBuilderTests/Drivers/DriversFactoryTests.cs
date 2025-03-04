@@ -1,8 +1,8 @@
 using DynamicQueryBuilder.Drivers;
 using DynamicQueryBuilder.Models.Enums.Helpers.Databases;
-using FluentAssertions;
 using MySql.Data.MySqlClient;
 using Npgsql;
+using Shouldly;
 using Xunit;
 
 namespace DynamicQueryBuilderTests.Drivers;
@@ -19,8 +19,8 @@ public class DriversFactoryTests
         var connection = DriversFactory.GetDatabaseConnection(DatabaseDriver.POSTGRESQL, PostgresConnectionString);
 
         // Assert
-        connection.Should().BeOfType<NpgsqlConnection>();
-        connection.ConnectionString.Should().Be(PostgresConnectionString);
+        connection.ShouldBeOfType<NpgsqlConnection>();
+        connection.ConnectionString.ShouldBe(PostgresConnectionString);
     }
 
     [Fact]
@@ -30,8 +30,8 @@ public class DriversFactoryTests
         var connection = DriversFactory.GetDatabaseConnection(DatabaseDriver.MYSQL, MySqlConnectionString);
 
         // Assert
-        connection.Should().BeOfType<MySqlConnection>();
-        connection.ConnectionString.Should().Be(MySqlConnectionString);
+        connection.ShouldBeOfType<MySqlConnection>();
+        connection.ConnectionString.ShouldBe(MySqlConnectionString);
     }
 
     [Fact]
@@ -42,7 +42,7 @@ public class DriversFactoryTests
 
         // Act & Assert
         Action action = () => DriversFactory.GetDatabaseConnection(unsupportedDriver, PostgresConnectionString);
-        action.Should().Throw<NotSupportedException>().WithMessage("UNSUPPORTED DATABASE DRIVER.");
+        action.ShouldThrow<NotSupportedException>("UNSUPPORTED DATABASE DRIVER.");
     }
 
     [Fact]
@@ -50,7 +50,7 @@ public class DriversFactoryTests
     {
         // Act & Assert
         Action action = () => DriversFactory.GetDatabaseConnection(DatabaseDriver.POSTGRESQL, null!);
-        action.Should().Throw<ArgumentNullException>().WithMessage("Value cannot be null. (Parameter 'connectionString')");
+        action.ShouldThrow<ArgumentNullException>("Value cannot be null. (Parameter 'connectionString')");
     }
 
     [Fact]
@@ -58,7 +58,7 @@ public class DriversFactoryTests
     {
         // Act & Assert
         Action action = () => DriversFactory.GetDatabaseConnection(DatabaseDriver.POSTGRESQL, string.Empty);
-        action.Should().Throw<ArgumentException>().WithMessage("Connection string cannot be empty. (Parameter 'connectionString')");
+        action.ShouldThrow<ArgumentException>("Connection string cannot be empty. (Parameter 'connectionString')");
     }
 
     [Fact]
@@ -68,12 +68,12 @@ public class DriversFactoryTests
         var query = DriversFactory.GetMetadataQuery(DatabaseDriver.POSTGRESQL);
 
         // Assert
-        query.Should().Contain("SELECT");
-        query.Should().Contain("table_schema");
-        query.Should().Contain("table_name");
-        query.Should().Contain("column_name");
-        query.Should().Contain("data_type");
-        query.Should().Contain("information_schema.columns");
+        query.ShouldContain("SELECT");
+        query.ShouldContain("table_schema");
+        query.ShouldContain("table_name");
+        query.ShouldContain("column_name");
+        query.ShouldContain("data_type");
+        query.ShouldContain("information_schema.columns");
     }
 
     [Fact]
@@ -83,10 +83,10 @@ public class DriversFactoryTests
         var query = DriversFactory.GetMetadataQuery(DatabaseDriver.POSTGRESQL);
 
         // Assert
-        query.Should().Contain("LEFT JOIN");
-        query.Should().Contain("FROM information_schema.table_constraints");
-        query.Should().Contain("JOIN information_schema.key_column_usage");
-        query.Should().Contain("JOIN information_schema.constraint_column_usage");
+        query.ShouldContain("LEFT JOIN");
+        query.ShouldContain("FROM information_schema.table_constraints");
+        query.ShouldContain("JOIN information_schema.key_column_usage");
+        query.ShouldContain("JOIN information_schema.constraint_column_usage");
     }
 
     [Fact]
@@ -96,7 +96,7 @@ public class DriversFactoryTests
         var query = DriversFactory.GetMetadataQuery(DatabaseDriver.POSTGRESQL);
 
         // Assert
-        query.Should().Contain("WHERE table_schema NOT IN ('pg_catalog', 'information_schema')");
+        query.ShouldContain("WHERE table_schema NOT IN ('pg_catalog', 'information_schema')");
     }
 
     [Fact]
@@ -106,12 +106,12 @@ public class DriversFactoryTests
         var query = DriversFactory.GetMetadataQuery(DatabaseDriver.MYSQL);
 
         // Assert
-        query.Should().Contain("SELECT");
-        query.Should().Contain("TABLE_SCHEMA");
-        query.Should().Contain("TABLE_NAME");
-        query.Should().Contain("COLUMN_NAME");
-        query.Should().Contain("COLUMN_TYPE");
-        query.Should().Contain("INFORMATION_SCHEMA.COLUMNS");
+        query.ShouldContain("SELECT");
+        query.ShouldContain("TABLE_SCHEMA");
+        query.ShouldContain("TABLE_NAME");
+        query.ShouldContain("COLUMN_NAME");
+        query.ShouldContain("COLUMN_TYPE");
+        query.ShouldContain("INFORMATION_SCHEMA.COLUMNS");
     }
 
     [Fact]
@@ -121,7 +121,7 @@ public class DriversFactoryTests
         var query = DriversFactory.GetMetadataQuery(DatabaseDriver.MYSQL);
 
         // Assert
-        query.Should().Contain("LEFT JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE");
+        query.ShouldContain("LEFT JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE");
     }
 
     [Fact]
@@ -131,7 +131,7 @@ public class DriversFactoryTests
         var query = DriversFactory.GetMetadataQuery(DatabaseDriver.MYSQL);
 
         // Assert
-        query.Should().Contain("WHERE TABLE_SCHEMA NOT IN ('mysql', 'information_schema', 'performance_schema')");
+        query.ShouldContain("WHERE TABLE_SCHEMA NOT IN ('mysql', 'information_schema', 'performance_schema')");
     }
 
     [Fact]
@@ -142,6 +142,6 @@ public class DriversFactoryTests
 
         // Act & Assert
         Action action = () => DriversFactory.GetMetadataQuery(unsupportedDriver);
-        action.Should().Throw<NotSupportedException>().WithMessage("UNSUPPORTED DATABASE DRIVER.");
+        action.ShouldThrow<NotSupportedException>("UNSUPPORTED DATABASE DRIVER.");
     }
 }
