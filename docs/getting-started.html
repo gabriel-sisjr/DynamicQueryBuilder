@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/docs/getting-started.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/6/merge/docs/getting-started.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -98,8 +98,8 @@
 <ol>
 <li>Add DynamicQueryBuilder to your services in <code>Program.cs</code>:</li>
 </ol>
-<pre><code class="lang-csharp">var databaseConnectionString = builder.Configuration.GetConnectionString(&quot;YourConnectionString&quot;);
-builder.Services.AddDynamicQueryBuilder(databaseConnectionString);
+<pre><code class="lang-csharp">var settings = new DynamicQueryBuilderSettings(&quot;Your connection string&quot;, DatabaseDriver.POSTGRESQL); // See available drivers.
+builder.Services.AddDynamicQueryBuilder(settings);
 </code></pre>
 <ol start="2">
 <li>Inject and use the service in your code:</li>
@@ -118,13 +118,13 @@ builder.Services.AddDynamicQueryBuilder(databaseConnectionString);
     */
     public async Task&lt;IActionResult&gt; GetDatabaseMetadata()
     {
-        var metadata = await _getDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver.POSTGRESQL); // See available drivers.
+        var metadata = await _getDatabaseMetaData.GetDatabaseTablesMetaDataAsync();
         return Ok(metadata);
     }
 }
 </code></pre>
 <h2 id="method-response">Method Response</h2>
-<p>The method returns a structured JSON containing information about various entities in the system. Each table is organized within a <code>public</code> object, and each contains an array of columns, where each column provides details such as:</p>
+<p>The method returns a structured JSON containing information about various entities in the system. Each table is organized based in the schema, and each contains an array of columns, where each column provides details such as:</p>
 <ul>
 <li><strong>Column name (<code>column</code>)</strong></li>
 <li><strong>Data type (<code>columnType</code>)</strong></li>
@@ -133,7 +133,7 @@ builder.Services.AddDynamicQueryBuilder(databaseConnectionString);
 </ul>
 <h3 id="example-of-returned-structure">Example of Returned Structure:</h3>
 <pre><code class="lang-json">{
-  &quot;public&quot;: {
+  &quot;SCHEMA_NAME&quot;: {
     &quot;EXAMPLE_TABLE&quot;: [
       {
         &quot;column&quot;: &quot;ID&quot;,
@@ -191,7 +191,7 @@ builder.Services.AddDynamicQueryBuilder(databaseConnectionString);
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/6/merge/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
