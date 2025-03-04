@@ -18,10 +18,6 @@ public partial class QueryBuilder : IQueryBuilderSetup, IQueryBuilder
     private int? _limit;
     private string _table = string.Empty;
 
-    private QueryBuilder()
-    {
-    }
-
     /// <inheritdoc />
     public IQueryBuilder FromTable(string table)
     {
