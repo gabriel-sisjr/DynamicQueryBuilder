@@ -17,7 +17,8 @@ public class QueryBuilderTests
     public void TestSimpleSelect()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo).FromTable("employees");
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
+            .FromTable("employees");
         var sql = qb.GenerateSql();
 
         // Assert
@@ -28,7 +29,7 @@ public class QueryBuilderTests
     public void TestSelectColumns()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .Columns("ID", "NAME");
         var sql = qb.GenerateSql();
@@ -41,7 +42,7 @@ public class QueryBuilderTests
     public void TestJoinClause()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .Columns("EMPLOYEES.ID", "EMPLOYEES.NAME", "DEPARTMENTS.DEPT_NAME")
             .Join(JoinOperators.INNER_JOIN, "DEPARTMENTS", "EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.ID");
@@ -57,7 +58,7 @@ public class QueryBuilderTests
     public void TestFilterByComparison()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .FilterBy("AGE", ComparisonOperators.GREATER_THAN, "30");
         var sql = qb.GenerateSql();
@@ -70,7 +71,7 @@ public class QueryBuilderTests
     public void TestAndMultipleFilters()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .FilterBy("CITY", StringOperators.LIKE, "'New%'")
             .FilterBy("AGE", ComparisonOperators.GREATER_OR_EQUAL, "18");
@@ -84,7 +85,7 @@ public class QueryBuilderTests
     public void TestOrMultipleFilters()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .FilterBy("AGE", ComparisonOperators.GREATER_THAN, "25")
             .OrFilterBy("DEPARTMENT", ComparisonOperators.EQUAL, "'Sales'");
@@ -98,7 +99,7 @@ public class QueryBuilderTests
     public void TestGroupOrderLimit()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .Columns("DEPARTMENT", "COUNT(ID) AS EmployeeCount")
             .GroupBy("DEPARTMENT")
@@ -116,7 +117,7 @@ public class QueryBuilderTests
     public void TestFormattedSql()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .Columns("EMPLOYEES.ID", "EMPLOYEES.NAME", "DEPARTMENTS.DEPT_NAME")
             .Join(JoinOperators.INNER_JOIN, "DEPARTMENTS", "EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.ID")
@@ -140,7 +141,7 @@ public class QueryBuilderTests
     public void TestInclusionFilter()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .FilterBy("DEPARTMENT", InclusionOperators.IN, new List<string> { "'Sales'", "'Marketing'" });
         var sql = qb.GenerateSql();
@@ -153,7 +154,7 @@ public class QueryBuilderTests
     public void TestNullFilter()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .FilterBy("AGE", NullOperators.IS_NULL);
         var sql = qb.GenerateSql();
@@ -166,7 +167,7 @@ public class QueryBuilderTests
     public void TestRangeFilter()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .FilterBy("AGE", RangeOperators.BETWEEN, "25", "35");
         var sql = qb.GenerateSql();
@@ -179,7 +180,7 @@ public class QueryBuilderTests
     public void TestStringFilter()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .FilterBy("NAME", StringOperators.LIKE, "'A%'");
         var sql = qb.GenerateSql();
@@ -192,8 +193,7 @@ public class QueryBuilderTests
     public void TestUndefinedTableThrowsException()
     {
         // Act
-        var qb = new QueryBuilder(_dbInfo);
-
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo);
         // Assert
         Assert.Throws<InvalidOperationException>(() => qb.GenerateSql());
     }
@@ -202,7 +202,8 @@ public class QueryBuilderTests
     public void TestInvalidTableThrowsException()
     {
         // Act
-        IQueryBuilder qb = new QueryBuilder(_dbInfo).FromTable("Other table name");
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
+            .FromTable("Other table name");
 
         // Assert
         Assert.Throws<InvalidOperationException>(() => qb.GenerateSql());
@@ -211,7 +212,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrderBySingleColumnWithDirection()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .OrderBy("AGE", OrderDirection.DESC);
 
@@ -222,7 +223,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFilterByNullOperators_IsNull()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", NullOperators.IS_NULL);
 
@@ -233,7 +234,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFilterByNullOperators_IsNotNull()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", NullOperators.IS_NOT_NULL);
 
@@ -244,7 +245,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFilterByRangeOperators_Between()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", RangeOperators.BETWEEN, "25", "35");
 
@@ -255,7 +256,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFilterByRangeOperators_NotBetween()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", RangeOperators.NOT_BETWEEN, "25", "35");
 
@@ -266,7 +267,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFilterByStringOperators_Like()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("NAME", StringOperators.LIKE, "'A%'");
 
@@ -277,7 +278,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFilterByStringOperators_ILike()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("NAME", StringOperators.ILIKE, "'a%'");
 
@@ -289,7 +290,7 @@ public class QueryBuilderTests
     public void TestFilterByRawStringOperator()
     {
         // e.g. FilterBy("AGE", ">=", "30")
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", ">=", "30");
 
@@ -300,7 +301,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrFilterByComparison()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", ComparisonOperators.GREATER_THAN, "30")
             .OrFilterBy("CITY", ComparisonOperators.EQUAL, "'New York'");
@@ -312,7 +313,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrFilterByStringOperator()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("NAME", ComparisonOperators.EQUAL, "'Alice'")
             .OrFilterBy("NAME", StringOperators.LIKE, "'B%'");
@@ -324,7 +325,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrFilterByRangeOperators_Between()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", ComparisonOperators.LESS_THAN, "18")
             .OrFilterBy("AGE", RangeOperators.BETWEEN, "30", "40");
@@ -336,7 +337,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrFilterByNullOperators()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("CITY", ComparisonOperators.EQUAL, "'Boston'")
             .OrFilterBy("CITY", NullOperators.IS_NULL);
@@ -348,7 +349,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrFilterByInclusionOperators()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", InclusionOperators.IN, new List<string> { "25", "26" })
             .OrFilterBy("AGE", InclusionOperators.IN, new List<string> { "30", "31" });
@@ -360,7 +361,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestGroupByMultipleColumns()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .Columns("CITY", "DEPARTMENT_ID", "COUNT(ID) AS EMP_COUNT")
             .GroupBy("CITY", "DEPARTMENT_ID");
@@ -373,7 +374,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestMultipleJoins_CrossAndLeft()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .Join(JoinOperators.CROSS_JOIN, "DEPARTMENTS", "EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.ID")
             .Join(JoinOperators.LEFT_JOIN, "DEPARTMENTS D2", "EMPLOYEES.DEPARTMENT_ID = D2.ID");
@@ -388,7 +389,7 @@ public class QueryBuilderTests
     [InlineData((ComparisonOperators)999)]
     public void TestInvalidComparisonOperatorThrows(ComparisonOperators invalidOp)
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES");
 
         Assert.Throws<ArgumentOutOfRangeException>(() => qb.FilterBy("AGE", invalidOp, "30"));
@@ -398,7 +399,7 @@ public class QueryBuilderTests
     [InlineData((InclusionOperators)999)]
     public void TestInvalidInclusionOperatorThrows(InclusionOperators invalidOp)
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES");
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -409,7 +410,7 @@ public class QueryBuilderTests
     [InlineData((NullOperators)999)]
     public void TestInvalidNullOperatorThrows(NullOperators invalidOp)
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES");
 
         Assert.Throws<ArgumentOutOfRangeException>(() => qb.FilterBy("AGE", invalidOp));
@@ -419,7 +420,7 @@ public class QueryBuilderTests
     [InlineData((RangeOperators)999)]
     public void TestInvalidRangeOperatorThrows(RangeOperators invalidOp)
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES");
 
         Assert.Throws<ArgumentOutOfRangeException>(() => qb.FilterBy("AGE", invalidOp, "25", "35"));
@@ -429,7 +430,7 @@ public class QueryBuilderTests
     [InlineData((StringOperators)999)]
     public void TestInvalidStringOperatorThrows(StringOperators invalidOp)
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES");
 
         Assert.Throws<ArgumentOutOfRangeException>(() => qb.FilterBy("NAME", invalidOp, "'A%'"));
@@ -439,7 +440,7 @@ public class QueryBuilderTests
     [InlineData((JoinOperators)999)]
     public void TestInvalidJoinOperatorThrows(JoinOperators invalidOp)
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES");
 
         Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -449,7 +450,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFullJoinAndSelfJoin()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .Join(JoinOperators.FULL_JOIN, "DEPARTMENTS", "EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.ID")
             .Join(JoinOperators.SELF_JOIN, "EMPLOYEES E2", "EMPLOYEES.ID = E2.ID");
@@ -463,7 +464,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrFilterByRawStringOperator()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", ">=", "30")
             .OrFilterBy("AGE", "!=", "40");
@@ -475,7 +476,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestChainedColumns()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .Columns("ID")
             .Columns("NAME", "AGE");
@@ -487,7 +488,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestMultipleOrderByColumns()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .OrderBy("NAME", "AGE");
 
@@ -498,7 +499,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrderByNoColumns()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .OrderBy(); // No columns passed
 
@@ -510,7 +511,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestGroupByNoColumns()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .GroupBy(); // no columns
 
@@ -522,7 +523,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestSetLimitZero()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .SetLimit(0);
 
@@ -533,7 +534,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestComplexAndFilters()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("CITY", StringOperators.LIKE, "'New%'")
             .FilterBy("AGE", ComparisonOperators.GREATER_OR_EQUAL, "18")
@@ -543,14 +544,13 @@ public class QueryBuilderTests
         var sql = qb.GenerateSql();
         Assert.Equal(
             "SELECT * FROM EMPLOYEES WHERE CITY LIKE 'New%' AND AGE >= 18 AND DEPARTMENT_ID IN (1, 2) AND NAME IS NOT NULL",
-            sql
-        );
+            sql);
     }
 
     [Fact]
     public void TestComplexOrFilters()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", ComparisonOperators.LESS_THAN, "18")
             .OrFilterBy("AGE", RangeOperators.BETWEEN, "30", "40")
@@ -559,15 +559,13 @@ public class QueryBuilderTests
 
         var sql = qb.GenerateSql();
         Assert.Equal(
-            "SELECT * FROM EMPLOYEES WHERE AGE < 18 OR AGE BETWEEN 30 AND 40 OR NAME LIKE 'A%' OR NAME IS NULL",
-            sql
-        );
+            "SELECT * FROM EMPLOYEES WHERE AGE < 18 OR AGE BETWEEN 30 AND 40 OR NAME LIKE 'A%' OR NAME IS NULL", sql);
     }
 
     [Fact]
     public void TestFromTableDifferentCase()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees"); // lowercased, but dictionary has "EMPLOYEES"
 
         var sql = qb.GenerateSql();
@@ -577,7 +575,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFilterByEmptyRawOperator()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", "", "30"); // empty operator
 
@@ -589,7 +587,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestOrFilterByEmptyColumn()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("EMPLOYEES")
             .FilterBy("AGE", ">", "25")
             .OrFilterBy("", "=", "NULL"); // empty column name
@@ -602,21 +600,22 @@ public class QueryBuilderTests
     [Fact]
     public void TestUndefinedTableThrowsExceptionInGenerateFormattedSql()
     {
-        var qb = new QueryBuilder(_dbInfo);
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo);
         Assert.Throws<InvalidOperationException>(() => qb.GenerateFormattedSql());
     }
 
     [Fact]
     public void TestInvalidTableThrowsExceptionInGenerateFormattedSql()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo).FromTable("NonExistentTable");
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
+            .FromTable("NonExistentTable");
         Assert.Throws<InvalidOperationException>(() => qb.GenerateFormattedSql());
     }
 
     [Fact]
     public void TestFormattedSqlMultipleFiltersAndNoColumns()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             // First filter
             .FilterBy("AGE", ComparisonOperators.GREATER_THAN, "30")
@@ -634,7 +633,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFormattedSqlMultipleJoins()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .Columns("EMPLOYEES.ID", "EMPLOYEES.NAME", "DEPARTMENTS.DEPT_NAME")
             .Join(JoinOperators.INNER_JOIN, "DEPARTMENTS", "EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.ID")
@@ -661,7 +660,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFormattedSqlChainedColumns()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .Columns("ID")
             .Columns("NAME", "AGE")
@@ -677,7 +676,7 @@ public class QueryBuilderTests
     [Fact]
     public void TestFormattedSqlWithLimitZero()
     {
-        IQueryBuilder qb = new QueryBuilder(_dbInfo)
+        IQueryBuilder qb = QueryBuilder.Create().Setup(_dbInfo)
             .FromTable("employees")
             .Columns("ID", "NAME")
             .SetLimit(0);

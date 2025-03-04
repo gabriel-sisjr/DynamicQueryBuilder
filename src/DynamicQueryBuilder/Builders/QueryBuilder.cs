@@ -7,26 +7,21 @@ namespace DynamicQueryBuilder.Builders;
 /// <summary>
 ///     Implements the IQueryBuilder interface to build SQL queries fluently.
 /// </summary>
-public partial class QueryBuilder : IQueryBuilder
+public partial class QueryBuilder : IQueryBuilderSetup, IQueryBuilder
 {
     private readonly List<string> _columns = [];
-    private readonly Dictionary<string, List<string>> _databaseInfo;
     private readonly List<FilterClause> _filters = [];
     private readonly List<string> _groups = [];
     private readonly List<string> _joins = [];
     private readonly List<string> _orders = [];
+    private Dictionary<string, List<string>>? _databaseInfo;
     private int? _limit;
     private string _table = string.Empty;
 
-    /// <summary>
-    ///     Initializes a new instance of the <see cref="QueryBuilder" /> class.
-    /// </summary>
-    /// <param name="databaseInfo">A dictionary containing table names and their column lists.</param>
-    public QueryBuilder(Dictionary<string, List<string>> databaseInfo)
+    private QueryBuilder()
     {
-        _databaseInfo = databaseInfo;
     }
-    
+
     /// <inheritdoc />
     public IQueryBuilder FromTable(string table)
     {
@@ -90,6 +85,9 @@ public partial class QueryBuilder : IQueryBuilder
     /// <inheritdoc />
     public string GenerateSql()
     {
+        if (_databaseInfo == null)
+            throw new InvalidOperationException("Setup must be called before building the query.");
+
         if (string.IsNullOrEmpty(_table) || !_databaseInfo.ContainsKey(_table))
             throw new InvalidOperationException("Undefined or Invalid table.");
 
@@ -126,6 +124,9 @@ public partial class QueryBuilder : IQueryBuilder
     /// <inheritdoc />
     public string GenerateFormattedSql()
     {
+        if (_databaseInfo == null)
+            throw new InvalidOperationException("Setup must be called before building the query.");
+
         if (string.IsNullOrEmpty(_table) || !_databaseInfo.ContainsKey(_table))
             throw new InvalidOperationException("Undefined or Invalid table.");
 
@@ -171,5 +172,21 @@ public partial class QueryBuilder : IQueryBuilder
         }
 
         return sql.ToString();
+    }
+
+    /// <inheritdoc />
+    public IQueryBuilder Setup(Dictionary<string, List<string>> databaseInfo)
+    {
+        _databaseInfo = databaseInfo;
+        return this;
+    }
+
+    /// <summary>
+    ///     Factory method to start the builder.
+    /// </summary>
+    /// <returns>A <see cref="QueryBuilder" /> stance.</returns>
+    public static IQueryBuilderSetup Create()
+    {
+        return new QueryBuilder();
     }
 }
