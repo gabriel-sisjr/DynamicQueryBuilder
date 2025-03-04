@@ -17,12 +17,19 @@ public static class DriversFactory
     /// <param name="connectionString">The connection string.</param>
     /// <returns>A database connection.</returns>
     public static IDbConnection GetDatabaseConnection(DatabaseDriver driver, string connectionString)
-        => driver switch
+    {
+        ArgumentNullException.ThrowIfNull(connectionString);
+
+        if (string.IsNullOrWhiteSpace(connectionString))
+            throw new ArgumentException("Connection string cannot be empty.", nameof(connectionString));
+
+        return driver switch
         {
             DatabaseDriver.POSTGRESQL => new NpgsqlConnection(connectionString),
             DatabaseDriver.MYSQL => new MySqlConnection(connectionString),
             _ => throw new NotSupportedException("UNSUPPORTED DATABASE DRIVER.")
         };
+    }
 
     /// <summary>
     /// Get the metadata query for a database driver.
