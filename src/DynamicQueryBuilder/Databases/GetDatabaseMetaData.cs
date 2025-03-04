@@ -10,7 +10,7 @@ namespace DynamicQueryBuilder.Databases;
 /// <summary>
 /// Get the metadata of the database tables.
 /// </summary>
-public sealed class GetDatabaseMetaData(string ConnectionString) : IGetDatabaseMetaData
+public sealed class GetDatabaseMetaData(string connectionString) : IGetDatabaseMetaData
 {
     /// <summary>
     /// Get the metadata of the database tables.
@@ -22,7 +22,7 @@ public sealed class GetDatabaseMetaData(string ConnectionString) : IGetDatabaseM
     {
         var schemaTablesDict = new Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>();
 
-        using IDbConnection conn = DriversFactory.GetDatabaseConnection(driver, ConnectionString);
+        using IDbConnection conn = DriversFactory.GetDatabaseConnection(driver, connectionString);
         if (conn is DbConnection dbConn)
             await dbConn.OpenAsync();
         else
@@ -51,7 +51,7 @@ public sealed class GetDatabaseMetaData(string ConnectionString) : IGetDatabaseM
                 schemaTablesDict[schema] = new Dictionary<string, List<DatabaseTablesMetaData>>();
 
             if (!schemaTablesDict[schema].ContainsKey(table))
-                schemaTablesDict[schema][table] = new List<DatabaseTablesMetaData>();
+                schemaTablesDict[schema][table] = [];
 
             schemaTablesDict[schema][table].Add(new DatabaseTablesMetaData(
                 column, columnType, primaryKey, relatedSchema, relatedTable, relatedColumn
