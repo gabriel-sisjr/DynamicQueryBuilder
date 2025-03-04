@@ -13,11 +13,11 @@ public static class DynamicQueryBuilderModule
     /// Adds Dynamic Query Builder services to the service collection.
     /// </summary>
     /// <param name="services">The service collection.</param>
-    /// <param name="ConnectionString">The connection string.</param>
+    /// <param name="connectionString">The connection string.</param>
     /// <returns>The service collection.</returns>
-    public static IServiceCollection AddDynamicQueryBuilder(this IServiceCollection services, string ConnectionString)
+    public static IServiceCollection AddDynamicQueryBuilder(this IServiceCollection services, string connectionString)
     {
-        services.AddScoped<IGetDatabaseMetaData>(_ => new GetDatabaseMetaData(ConnectionString));
+        services.AddScoped<IGetDatabaseMetaData>(_ => new GetDatabaseMetaData(connectionString));
         return services;
     }
 }
