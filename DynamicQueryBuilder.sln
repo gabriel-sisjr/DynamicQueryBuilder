@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicQueryBuilder", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicQueryBuilderTests", "tests\DynamicQueryBuilderTests\DynamicQueryBuilderTests.csproj", "{E3504F21-527F-494D-A4BA-25145B30C058}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1874D0A8-5710-4C39-82CC-229D8B241DEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3FF6925E-9CE7-4A6A-9D2C-1EB8D7B2F4F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,9 @@ Global
 		{E3504F21-527F-494D-A4BA-25145B30C058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3504F21-527F-494D-A4BA-25145B30C058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3504F21-527F-494D-A4BA-25145B30C058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27A4D2BB-F651-4E4D-AA17-905516607D6F} = {1874D0A8-5710-4C39-82CC-229D8B241DEC}
+		{E3504F21-527F-494D-A4BA-25145B30C058} = {3FF6925E-9CE7-4A6A-9D2C-1EB8D7B2F4F3}
 	EndGlobalSection
 EndGlobal
