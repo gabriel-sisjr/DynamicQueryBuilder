@@ -10,7 +10,7 @@ public class DynamicQueryBuilderController(IGetDatabaseMetaData getDatabaseMetaD
 {
     public async Task<IActionResult> Get()
     {
-        var x = await getDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver.POSTGRESQL);
-        return Ok(x);
+        var tablesMetaData = await getDatabaseMetaData.GetDatabaseTablesMetaDataAsync();
+        return Ok(tablesMetaData);
     }
 }

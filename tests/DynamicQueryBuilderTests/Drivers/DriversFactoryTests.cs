@@ -1,3 +1,4 @@
+using System.Data;
 using DynamicQueryBuilder.Drivers;
 using DynamicQueryBuilder.Models.Enums.Helpers.Databases;
 using MySql.Data.MySqlClient;
@@ -16,7 +17,8 @@ public class DriversFactoryTests
     public void GetDatabaseConnection_WhenPostgreSQL_ReturnsNpgsqlConnection()
     {
         // Act
-        var connection = DriversFactory.GetDatabaseConnection(DatabaseDriver.POSTGRESQL, PostgresConnectionString);
+        IDbConnection? connection =
+            DriversFactory.GetDatabaseConnection(DatabaseDriver.POSTGRESQL, PostgresConnectionString);
 
         // Assert
         connection.ShouldBeOfType<NpgsqlConnection>();
@@ -27,7 +29,7 @@ public class DriversFactoryTests
     public void GetDatabaseConnection_WhenMySQL_ReturnsMySqlConnection()
     {
         // Act
-        var connection = DriversFactory.GetDatabaseConnection(DatabaseDriver.MYSQL, MySqlConnectionString);
+        IDbConnection? connection = DriversFactory.GetDatabaseConnection(DatabaseDriver.MYSQL, MySqlConnectionString);
 
         // Assert
         connection.ShouldBeOfType<MySqlConnection>();

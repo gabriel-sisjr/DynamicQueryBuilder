@@ -1,16 +1,17 @@
 namespace DynamicQueryBuilder.Models.Enums.Helpers.Databases;
 
 /// <summary>
-/// Supported drivers to get tables metadata.
+///     Supported drivers to get tables metadata.
 /// </summary>
 public enum DatabaseDriver
 {
     /// <summary>
-    /// PostgreSQL driver.
+    ///     PostgreSQL driver.
     /// </summary>
     POSTGRESQL = 0,
+
     /// <summary>
-    /// MySQL driver.
+    ///     MySQL driver.
     /// </summary>
-    MYSQL = 1,
+    MYSQL = 1
 }
