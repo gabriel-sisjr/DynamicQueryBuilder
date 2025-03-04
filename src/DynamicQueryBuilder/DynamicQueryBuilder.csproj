@@ -1,9 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>0.0.0.3</Version>
+        <Title>DynamicQueryBuilder</Title>
+        <Authors>Gabriel Santana</Authors>
+        <RepositoryUrl>https://github.com/gabriel-sisjr/DynamicQueryBuilder</RepositoryUrl>
+        <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
@@ -17,8 +21,14 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <NoWarn>1591</NoWarn> <!-- Suppresses missing XML comments warnings -->
+        <NoWarn>1591</NoWarn>
+        <NoWarn>CS1570</NoWarn>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MySql.Data" Version="9.2.0" />
+        <PackageReference Include="Npgsql" Version="9.0.3" />
+    </ItemGroup>
 
 
 </Project>
