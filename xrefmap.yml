@@ -7,50 +7,300 @@ references:
   commentId: N:DynamicQueryBuilder
   fullName: DynamicQueryBuilder
   nameWithType: DynamicQueryBuilder
-- uid: DynamicQueryBuilder.Databases
-  name: DynamicQueryBuilder.Databases
-  href: docs/api/DynamicQueryBuilder.Databases.html
-  commentId: N:DynamicQueryBuilder.Databases
-  fullName: DynamicQueryBuilder.Databases
-  nameWithType: DynamicQueryBuilder.Databases
-- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData
-  name: GetDatabaseMetaData
-  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html
-  commentId: T:DynamicQueryBuilder.Databases.GetDatabaseMetaData
-  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData
-  nameWithType: GetDatabaseMetaData
-- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor(System.String)
-  name: GetDatabaseMetaData(string)
-  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData__ctor_System_String_
-  commentId: M:DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor(System.String)
-  name.vb: New(String)
-  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseMetaData(string)
-  fullName.vb: DynamicQueryBuilder.Databases.GetDatabaseMetaData.New(String)
-  nameWithType: GetDatabaseMetaData.GetDatabaseMetaData(string)
-  nameWithType.vb: GetDatabaseMetaData.New(String)
-- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor*
-  name: GetDatabaseMetaData
-  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData__ctor_
-  commentId: Overload:DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor
+- uid: DynamicQueryBuilder.Builders
+  name: DynamicQueryBuilder.Builders
+  href: docs/api/DynamicQueryBuilder.Builders.html
+  commentId: N:DynamicQueryBuilder.Builders
+  fullName: DynamicQueryBuilder.Builders
+  nameWithType: DynamicQueryBuilder.Builders
+- uid: DynamicQueryBuilder.Builders.QueryBuilder
+  name: QueryBuilder
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html
+  commentId: T:DynamicQueryBuilder.Builders.QueryBuilder
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder
+  nameWithType: QueryBuilder
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Columns(System.String[])
+  name: Columns(params string[])
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Columns_System_String___
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.Columns(System.String[])
+  name.vb: Columns(ParamArray String())
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Columns(params string[])
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.Columns(ParamArray String())
+  nameWithType: QueryBuilder.Columns(params string[])
+  nameWithType.vb: QueryBuilder.Columns(ParamArray String())
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Columns*
+  name: Columns
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Columns_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.Columns
   isSpec: "True"
-  name.vb: New
-  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseMetaData
-  fullName.vb: DynamicQueryBuilder.Databases.GetDatabaseMetaData.New
-  nameWithType: GetDatabaseMetaData.GetDatabaseMetaData
-  nameWithType.vb: GetDatabaseMetaData.New
-- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
-  name: GetDatabaseTablesMetaDataAsync(DatabaseDriver)
-  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_
-  commentId: M:DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
-  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
-  nameWithType: GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver)
-- uid: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync*
-  name: GetDatabaseTablesMetaDataAsync
-  href: docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html#DynamicQueryBuilder_Databases_GetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_
-  commentId: Overload:DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Columns
+  nameWithType: QueryBuilder.Columns
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Create
+  name: Create()
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Create
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.Create
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Create()
+  nameWithType: QueryBuilder.Create()
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Create*
+  name: Create
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Create_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.Create
   isSpec: "True"
-  fullName: DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
-  nameWithType: GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Create
+  nameWithType: QueryBuilder.Create
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name: FilterBy(string, ComparisonOperators, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name.vb: FilterBy(String, ComparisonOperators, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, String)
+  nameWithType: QueryBuilder.FilterBy(string, ComparisonOperators, string)
+  nameWithType.vb: QueryBuilder.FilterBy(String, ComparisonOperators, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name: FilterBy(string, InclusionOperators, IEnumerable<string>)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: FilterBy(String, InclusionOperators, IEnumerable(Of String))
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: QueryBuilder.FilterBy(string, InclusionOperators, IEnumerable<string>)
+  nameWithType.vb: QueryBuilder.FilterBy(String, InclusionOperators, IEnumerable(Of String))
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name: FilterBy(string, NullOperators)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name.vb: FilterBy(String, NullOperators)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  nameWithType: QueryBuilder.FilterBy(string, NullOperators)
+  nameWithType.vb: QueryBuilder.FilterBy(String, NullOperators)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name: FilterBy(string, RangeOperators, string, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name.vb: FilterBy(String, RangeOperators, String, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, string, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, String, String)
+  nameWithType: QueryBuilder.FilterBy(string, RangeOperators, string, string)
+  nameWithType.vb: QueryBuilder.FilterBy(String, RangeOperators, String, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name: FilterBy(string, StringOperators, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name.vb: FilterBy(String, StringOperators, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, String)
+  nameWithType: QueryBuilder.FilterBy(string, StringOperators, string)
+  nameWithType.vb: QueryBuilder.FilterBy(String, StringOperators, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,System.String,System.String)
+  name: FilterBy(string, string, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FilterBy_System_String_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(System.String,System.String,System.String)
+  name.vb: FilterBy(String, String, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(string, string, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy(String, String, String)
+  nameWithType: QueryBuilder.FilterBy(string, string, string)
+  nameWithType.vb: QueryBuilder.FilterBy(String, String, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy*
+  name: FilterBy
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FilterBy_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.FilterBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FilterBy
+  nameWithType: QueryBuilder.FilterBy
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FromTable(System.String)
+  name: FromTable(string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FromTable_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.FromTable(System.String)
+  name.vb: FromTable(String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FromTable(string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.FromTable(String)
+  nameWithType: QueryBuilder.FromTable(string)
+  nameWithType.vb: QueryBuilder.FromTable(String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.FromTable*
+  name: FromTable
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_FromTable_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.FromTable
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.FromTable
+  nameWithType: QueryBuilder.FromTable
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.GenerateFormattedSql
+  name: GenerateFormattedSql()
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_GenerateFormattedSql
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.GenerateFormattedSql
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.GenerateFormattedSql()
+  nameWithType: QueryBuilder.GenerateFormattedSql()
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.GenerateFormattedSql*
+  name: GenerateFormattedSql
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_GenerateFormattedSql_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.GenerateFormattedSql
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.GenerateFormattedSql
+  nameWithType: QueryBuilder.GenerateFormattedSql
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.GenerateSql
+  name: GenerateSql()
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_GenerateSql
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.GenerateSql
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.GenerateSql()
+  nameWithType: QueryBuilder.GenerateSql()
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.GenerateSql*
+  name: GenerateSql
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_GenerateSql_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.GenerateSql
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.GenerateSql
+  nameWithType: QueryBuilder.GenerateSql
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.GroupBy(System.String[])
+  name: GroupBy(params string[])
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_GroupBy_System_String___
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.GroupBy(System.String[])
+  name.vb: GroupBy(ParamArray String())
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.GroupBy(params string[])
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.GroupBy(ParamArray String())
+  nameWithType: QueryBuilder.GroupBy(params string[])
+  nameWithType.vb: QueryBuilder.GroupBy(ParamArray String())
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.GroupBy*
+  name: GroupBy
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_GroupBy_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.GroupBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.GroupBy
+  nameWithType: QueryBuilder.GroupBy
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators,System.String,System.String)
+  name: Join(JoinOperators, string, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Join_DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators,System.String,System.String)
+  name.vb: Join(JoinOperators, String, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators, string, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators, String, String)
+  nameWithType: QueryBuilder.Join(JoinOperators, string, string)
+  nameWithType.vb: QueryBuilder.Join(JoinOperators, String, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Join*
+  name: Join
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Join_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.Join
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Join
+  nameWithType: QueryBuilder.Join
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name: OrFilterBy(string, ComparisonOperators, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name.vb: OrFilterBy(String, ComparisonOperators, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, String)
+  nameWithType: QueryBuilder.OrFilterBy(string, ComparisonOperators, string)
+  nameWithType.vb: QueryBuilder.OrFilterBy(String, ComparisonOperators, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name: OrFilterBy(string, InclusionOperators, IEnumerable<string>)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: OrFilterBy(String, InclusionOperators, IEnumerable(Of String))
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: QueryBuilder.OrFilterBy(string, InclusionOperators, IEnumerable<string>)
+  nameWithType.vb: QueryBuilder.OrFilterBy(String, InclusionOperators, IEnumerable(Of String))
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name: OrFilterBy(string, NullOperators)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name.vb: OrFilterBy(String, NullOperators)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  nameWithType: QueryBuilder.OrFilterBy(string, NullOperators)
+  nameWithType.vb: QueryBuilder.OrFilterBy(String, NullOperators)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name: OrFilterBy(string, RangeOperators, string, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name.vb: OrFilterBy(String, RangeOperators, String, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, string, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, String, String)
+  nameWithType: QueryBuilder.OrFilterBy(string, RangeOperators, string, string)
+  nameWithType.vb: QueryBuilder.OrFilterBy(String, RangeOperators, String, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name: OrFilterBy(string, StringOperators, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name.vb: OrFilterBy(String, StringOperators, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, String)
+  nameWithType: QueryBuilder.OrFilterBy(string, StringOperators, string)
+  nameWithType.vb: QueryBuilder.OrFilterBy(String, StringOperators, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,System.String,System.String)
+  name: OrFilterBy(string, string, string)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrFilterBy_System_String_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(System.String,System.String,System.String)
+  name.vb: OrFilterBy(String, String, String)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(string, string, string)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy(String, String, String)
+  nameWithType: QueryBuilder.OrFilterBy(string, string, string)
+  nameWithType.vb: QueryBuilder.OrFilterBy(String, String, String)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy*
+  name: OrFilterBy
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrFilterBy_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrFilterBy
+  nameWithType: QueryBuilder.OrFilterBy
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  name: OrderBy(string, OrderDirection)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrderBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_OrderDirection_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  name.vb: OrderBy(String, OrderDirection)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  nameWithType: QueryBuilder.OrderBy(string, OrderDirection)
+  nameWithType.vb: QueryBuilder.OrderBy(String, OrderDirection)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(System.String[])
+  name: OrderBy(params string[])
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrderBy_System_String___
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(System.String[])
+  name.vb: OrderBy(ParamArray String())
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(params string[])
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy(ParamArray String())
+  nameWithType: QueryBuilder.OrderBy(params string[])
+  nameWithType.vb: QueryBuilder.OrderBy(ParamArray String())
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy*
+  name: OrderBy
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_OrderBy_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.OrderBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.OrderBy
+  nameWithType: QueryBuilder.OrderBy
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.SetLimit(System.Int32)
+  name: SetLimit(int)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_SetLimit_System_Int32_
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.SetLimit(System.Int32)
+  name.vb: SetLimit(Integer)
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.SetLimit(int)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.SetLimit(Integer)
+  nameWithType: QueryBuilder.SetLimit(int)
+  nameWithType.vb: QueryBuilder.SetLimit(Integer)
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.SetLimit*
+  name: SetLimit
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_SetLimit_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.SetLimit
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.SetLimit
+  nameWithType: QueryBuilder.SetLimit
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Setup(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  name: Setup(Dictionary<string, List<string>>)
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Setup_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___
+  commentId: M:DynamicQueryBuilder.Builders.QueryBuilder.Setup(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  name.vb: Setup(Dictionary(Of String, List(Of String)))
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Setup(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>)
+  fullName.vb: DynamicQueryBuilder.Builders.QueryBuilder.Setup(System.Collections.Generic.Dictionary(Of String, System.Collections.Generic.List(Of String)))
+  nameWithType: QueryBuilder.Setup(Dictionary<string, List<string>>)
+  nameWithType.vb: QueryBuilder.Setup(Dictionary(Of String, List(Of String)))
+- uid: DynamicQueryBuilder.Builders.QueryBuilder.Setup*
+  name: Setup
+  href: docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html#DynamicQueryBuilder_Builders_QueryBuilder_Setup_
+  commentId: Overload:DynamicQueryBuilder.Builders.QueryBuilder.Setup
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Builders.QueryBuilder.Setup
+  nameWithType: QueryBuilder.Setup
 - uid: DynamicQueryBuilder.Drivers
   name: DynamicQueryBuilder.Drivers
   href: docs/api/DynamicQueryBuilder.Drivers.html
@@ -98,15 +348,12 @@ references:
   commentId: T:DynamicQueryBuilder.DynamicQueryBuilderModule
   fullName: DynamicQueryBuilder.DynamicQueryBuilderModule
   nameWithType: DynamicQueryBuilderModule
-- uid: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
-  name: AddDynamicQueryBuilder(IServiceCollection, string)
-  href: docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html#DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
-  commentId: M:DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
-  name.vb: AddDynamicQueryBuilder(IServiceCollection, String)
-  fullName: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection, string)
-  fullName.vb: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
-  nameWithType: DynamicQueryBuilderModule.AddDynamicQueryBuilder(IServiceCollection, string)
-  nameWithType.vb: DynamicQueryBuilderModule.AddDynamicQueryBuilder(IServiceCollection, String)
+- uid: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings)
+  name: AddDynamicQueryBuilder(IServiceCollection, DynamicQueryBuilderSettings)
+  href: docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html#DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_
+  commentId: M:DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings)
+  fullName: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection, DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings)
+  nameWithType: DynamicQueryBuilderModule.AddDynamicQueryBuilder(IServiceCollection, DynamicQueryBuilderSettings)
 - uid: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder*
   name: AddDynamicQueryBuilder
   href: docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.html#DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_
@@ -114,6 +361,293 @@ references:
   isSpec: "True"
   fullName: DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder
   nameWithType: DynamicQueryBuilderModule.AddDynamicQueryBuilder
+- uid: DynamicQueryBuilder.Interfaces.Builders
+  name: DynamicQueryBuilder.Interfaces.Builders
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.html
+  commentId: N:DynamicQueryBuilder.Interfaces.Builders
+  fullName: DynamicQueryBuilder.Interfaces.Builders
+  nameWithType: DynamicQueryBuilder.Interfaces.Builders
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder
+  name: IQueryBuilder
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html
+  commentId: T:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder
+  nameWithType: IQueryBuilder
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns(System.String[])
+  name: Columns(params string[])
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Columns_System_String___
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns(System.String[])
+  name.vb: Columns(ParamArray String())
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns(params string[])
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns(ParamArray String())
+  nameWithType: IQueryBuilder.Columns(params string[])
+  nameWithType.vb: IQueryBuilder.Columns(ParamArray String())
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns*
+  name: Columns
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Columns_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns
+  nameWithType: IQueryBuilder.Columns
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name: FilterBy(string, ComparisonOperators, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name.vb: FilterBy(String, ComparisonOperators, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, String)
+  nameWithType: IQueryBuilder.FilterBy(string, ComparisonOperators, string)
+  nameWithType.vb: IQueryBuilder.FilterBy(String, ComparisonOperators, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name: FilterBy(string, InclusionOperators, IEnumerable<string>)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: FilterBy(String, InclusionOperators, IEnumerable(Of String))
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: IQueryBuilder.FilterBy(string, InclusionOperators, IEnumerable<string>)
+  nameWithType.vb: IQueryBuilder.FilterBy(String, InclusionOperators, IEnumerable(Of String))
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name: FilterBy(string, NullOperators)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name.vb: FilterBy(String, NullOperators)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  nameWithType: IQueryBuilder.FilterBy(string, NullOperators)
+  nameWithType.vb: IQueryBuilder.FilterBy(String, NullOperators)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name: FilterBy(string, RangeOperators, string, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name.vb: FilterBy(String, RangeOperators, String, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, string, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, String, String)
+  nameWithType: IQueryBuilder.FilterBy(string, RangeOperators, string, string)
+  nameWithType.vb: IQueryBuilder.FilterBy(String, RangeOperators, String, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name: FilterBy(string, StringOperators, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name.vb: FilterBy(String, StringOperators, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, String)
+  nameWithType: IQueryBuilder.FilterBy(string, StringOperators, string)
+  nameWithType.vb: IQueryBuilder.FilterBy(String, StringOperators, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,System.String,System.String)
+  name: FilterBy(string, string, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,System.String,System.String)
+  name.vb: FilterBy(String, String, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(string, string, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(String, String, String)
+  nameWithType: IQueryBuilder.FilterBy(string, string, string)
+  nameWithType.vb: IQueryBuilder.FilterBy(String, String, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy*
+  name: FilterBy
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy
+  nameWithType: IQueryBuilder.FilterBy
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable(System.String)
+  name: FromTable(string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FromTable_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable(System.String)
+  name.vb: FromTable(String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable(string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable(String)
+  nameWithType: IQueryBuilder.FromTable(string)
+  nameWithType.vb: IQueryBuilder.FromTable(String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable*
+  name: FromTable
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FromTable_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable
+  nameWithType: IQueryBuilder.FromTable
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql
+  name: GenerateFormattedSql()
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateFormattedSql
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql()
+  nameWithType: IQueryBuilder.GenerateFormattedSql()
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql*
+  name: GenerateFormattedSql
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateFormattedSql_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql
+  nameWithType: IQueryBuilder.GenerateFormattedSql
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql
+  name: GenerateSql()
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateSql
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql()
+  nameWithType: IQueryBuilder.GenerateSql()
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql*
+  name: GenerateSql
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateSql_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql
+  nameWithType: IQueryBuilder.GenerateSql
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy(System.String[])
+  name: GroupBy(params string[])
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GroupBy_System_String___
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy(System.String[])
+  name.vb: GroupBy(ParamArray String())
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy(params string[])
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy(ParamArray String())
+  nameWithType: IQueryBuilder.GroupBy(params string[])
+  nameWithType.vb: IQueryBuilder.GroupBy(ParamArray String())
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy*
+  name: GroupBy
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GroupBy_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy
+  nameWithType: IQueryBuilder.GroupBy
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators,System.String,System.String)
+  name: Join(JoinOperators, string, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Join_DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators,System.String,System.String)
+  name.vb: Join(JoinOperators, String, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators, string, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators, String, String)
+  nameWithType: IQueryBuilder.Join(JoinOperators, string, string)
+  nameWithType.vb: IQueryBuilder.Join(JoinOperators, String, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join*
+  name: Join
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Join_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join
+  nameWithType: IQueryBuilder.Join
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name: OrFilterBy(string, ComparisonOperators, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)
+  name.vb: OrFilterBy(String, ComparisonOperators, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators, String)
+  nameWithType: IQueryBuilder.OrFilterBy(string, ComparisonOperators, string)
+  nameWithType.vb: IQueryBuilder.OrFilterBy(String, ComparisonOperators, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name: OrFilterBy(string, InclusionOperators, IEnumerable<string>)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: OrFilterBy(String, InclusionOperators, IEnumerable(Of String))
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators, System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: IQueryBuilder.OrFilterBy(string, InclusionOperators, IEnumerable<string>)
+  nameWithType.vb: IQueryBuilder.OrFilterBy(String, InclusionOperators, IEnumerable(Of String))
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name: OrFilterBy(string, NullOperators)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  name.vb: OrFilterBy(String, NullOperators)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)
+  nameWithType: IQueryBuilder.OrFilterBy(string, NullOperators)
+  nameWithType.vb: IQueryBuilder.OrFilterBy(String, NullOperators)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name: OrFilterBy(string, RangeOperators, string, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)
+  name.vb: OrFilterBy(String, RangeOperators, String, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, string, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators, String, String)
+  nameWithType: IQueryBuilder.OrFilterBy(string, RangeOperators, string, string)
+  nameWithType.vb: IQueryBuilder.OrFilterBy(String, RangeOperators, String, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name: OrFilterBy(string, StringOperators, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)
+  name.vb: OrFilterBy(String, StringOperators, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators, String)
+  nameWithType: IQueryBuilder.OrFilterBy(string, StringOperators, string)
+  nameWithType.vb: IQueryBuilder.OrFilterBy(String, StringOperators, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,System.String,System.String)
+  name: OrFilterBy(string, string, string)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_System_String_System_String_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,System.String,System.String)
+  name.vb: OrFilterBy(String, String, String)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(string, string, string)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(String, String, String)
+  nameWithType: IQueryBuilder.OrFilterBy(string, string, string)
+  nameWithType.vb: IQueryBuilder.OrFilterBy(String, String, String)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy*
+  name: OrFilterBy
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy
+  nameWithType: IQueryBuilder.OrFilterBy
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  name: OrderBy(string, OrderDirection)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrderBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_OrderDirection_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  name.vb: OrderBy(String, OrderDirection)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(string, DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(String, DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)
+  nameWithType: IQueryBuilder.OrderBy(string, OrderDirection)
+  nameWithType.vb: IQueryBuilder.OrderBy(String, OrderDirection)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(System.String[])
+  name: OrderBy(params string[])
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrderBy_System_String___
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(System.String[])
+  name.vb: OrderBy(ParamArray String())
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(params string[])
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(ParamArray String())
+  nameWithType: IQueryBuilder.OrderBy(params string[])
+  nameWithType.vb: IQueryBuilder.OrderBy(ParamArray String())
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy*
+  name: OrderBy
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrderBy_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy
+  nameWithType: IQueryBuilder.OrderBy
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit(System.Int32)
+  name: SetLimit(int)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_SetLimit_System_Int32_
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit(System.Int32)
+  name.vb: SetLimit(Integer)
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit(int)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit(Integer)
+  nameWithType: IQueryBuilder.SetLimit(int)
+  nameWithType.vb: IQueryBuilder.SetLimit(Integer)
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit*
+  name: SetLimit
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_SetLimit_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit
+  nameWithType: IQueryBuilder.SetLimit
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup
+  name: IQueryBuilderSetup
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.html
+  commentId: T:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup
+  nameWithType: IQueryBuilderSetup
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  name: Setup(Dictionary<string, List<string>>)
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilderSetup_Setup_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___
+  commentId: M:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  name.vb: Setup(Dictionary(Of String, List(Of String)))
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>)
+  fullName.vb: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup(System.Collections.Generic.Dictionary(Of String, System.Collections.Generic.List(Of String)))
+  nameWithType: IQueryBuilderSetup.Setup(Dictionary<string, List<string>>)
+  nameWithType.vb: IQueryBuilderSetup.Setup(Dictionary(Of String, List(Of String)))
+- uid: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup*
+  name: Setup
+  href: docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilderSetup_Setup_
+  commentId: Overload:DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup
+  nameWithType: IQueryBuilderSetup.Setup
 - uid: DynamicQueryBuilder.Interfaces.Helpers
   name: DynamicQueryBuilder.Interfaces.Helpers
   href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.html
@@ -126,12 +660,12 @@ references:
   commentId: T:DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData
   fullName: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData
   nameWithType: IGetDatabaseMetaData
-- uid: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
-  name: GetDatabaseTablesMetaDataAsync(DatabaseDriver)
-  href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html#DynamicQueryBuilder_Interfaces_Helpers_IGetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_
-  commentId: M:DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
-  fullName: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
-  nameWithType: IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DatabaseDriver)
+- uid: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  name: GetDatabaseTablesMetaDataAsync()
+  href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html#DynamicQueryBuilder_Interfaces_Helpers_IGetDatabaseMetaData_GetDatabaseTablesMetaDataAsync
+  commentId: M:DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync
+  fullName: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync()
+  nameWithType: IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync()
 - uid: DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.GetDatabaseTablesMetaDataAsync*
   name: GetDatabaseTablesMetaDataAsync
   href: docs/api/DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html#DynamicQueryBuilder_Interfaces_Helpers_IGetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_
@@ -163,6 +697,333 @@ references:
   commentId: F:DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.POSTGRESQL
   fullName: DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.POSTGRESQL
   nameWithType: DatabaseDriver.POSTGRESQL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators
+  name: DynamicQueryBuilder.Models.Enums.SqlOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.html
+  commentId: N:DynamicQueryBuilder.Models.Enums.SqlOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators
+  nameWithType: DynamicQueryBuilder.Models.Enums.SqlOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators
+  name: ArithmeticOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators
+  nameWithType: ArithmeticOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.ADDITION
+  name: ADDITION
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ArithmeticOperators_ADDITION
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.ADDITION
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.ADDITION
+  nameWithType: ArithmeticOperators.ADDITION
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.DIVISION
+  name: DIVISION
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ArithmeticOperators_DIVISION
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.DIVISION
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.DIVISION
+  nameWithType: ArithmeticOperators.DIVISION
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.MODULO
+  name: MODULO
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ArithmeticOperators_MODULO
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.MODULO
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.MODULO
+  nameWithType: ArithmeticOperators.MODULO
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.MULTIPLICATION
+  name: MULTIPLICATION
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ArithmeticOperators_MULTIPLICATION
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.MULTIPLICATION
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.MULTIPLICATION
+  nameWithType: ArithmeticOperators.MULTIPLICATION
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.SUBTRACTION
+  name: SUBTRACTION
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ArithmeticOperators_SUBTRACTION
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.SUBTRACTION
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.SUBTRACTION
+  nameWithType: ArithmeticOperators.SUBTRACTION
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators
+  name: ComparisonOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators
+  nameWithType: ComparisonOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.EQUAL
+  name: EQUAL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_EQUAL
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.EQUAL
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.EQUAL
+  nameWithType: ComparisonOperators.EQUAL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.GREATER_OR_EQUAL
+  name: GREATER_OR_EQUAL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_GREATER_OR_EQUAL
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.GREATER_OR_EQUAL
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.GREATER_OR_EQUAL
+  nameWithType: ComparisonOperators.GREATER_OR_EQUAL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.GREATER_THAN
+  name: GREATER_THAN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_GREATER_THAN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.GREATER_THAN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.GREATER_THAN
+  nameWithType: ComparisonOperators.GREATER_THAN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.LESS_OR_EQUAL
+  name: LESS_OR_EQUAL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_LESS_OR_EQUAL
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.LESS_OR_EQUAL
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.LESS_OR_EQUAL
+  nameWithType: ComparisonOperators.LESS_OR_EQUAL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.LESS_THAN
+  name: LESS_THAN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_LESS_THAN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.LESS_THAN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.LESS_THAN
+  nameWithType: ComparisonOperators.LESS_THAN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.NOT_EQUAL
+  name: NOT_EQUAL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_NOT_EQUAL
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.NOT_EQUAL
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.NOT_EQUAL
+  nameWithType: ComparisonOperators.NOT_EQUAL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause
+  name: FilterClause
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause
+  nameWithType: FilterClause
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.#ctor(DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators,System.String)
+  name: FilterClause(LogicalOperators, string)
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html#DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause__ctor_DynamicQueryBuilder_Models_Enums_SqlOperators_LogicalOperators_System_String_
+  commentId: M:DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.#ctor(DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators,System.String)
+  name.vb: New(LogicalOperators, String)
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.FilterClause(DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators, string)
+  fullName.vb: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.New(DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators, String)
+  nameWithType: FilterClause.FilterClause(LogicalOperators, string)
+  nameWithType.vb: FilterClause.New(LogicalOperators, String)
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.#ctor*
+  name: FilterClause
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html#DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause__ctor_
+  commentId: Overload:DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.FilterClause
+  fullName.vb: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.New
+  nameWithType: FilterClause.FilterClause
+  nameWithType.vb: FilterClause.New
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition
+  name: Condition
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html#DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_Condition
+  commentId: P:DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition
+  nameWithType: FilterClause.Condition
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition*
+  name: Condition
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html#DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_Condition_
+  commentId: Overload:DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition
+  nameWithType: FilterClause.Condition
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator
+  name: JoinOperator
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html#DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_JoinOperator
+  commentId: P:DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator
+  nameWithType: FilterClause.JoinOperator
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator*
+  name: JoinOperator
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html#DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_JoinOperator_
+  commentId: Overload:DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator
+  nameWithType: FilterClause.JoinOperator
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators
+  name: InclusionOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators
+  nameWithType: InclusionOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.IN
+  name: IN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_IN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.IN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.IN
+  nameWithType: InclusionOperators.IN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.NOT_IN
+  name: NOT_IN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_NOT_IN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.NOT_IN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.NOT_IN
+  nameWithType: InclusionOperators.NOT_IN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators
+  name: JoinOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators
+  nameWithType: JoinOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.CROSS_JOIN
+  name: CROSS_JOIN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_CROSS_JOIN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.CROSS_JOIN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.CROSS_JOIN
+  nameWithType: JoinOperators.CROSS_JOIN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.FULL_JOIN
+  name: FULL_JOIN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_FULL_JOIN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.FULL_JOIN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.FULL_JOIN
+  nameWithType: JoinOperators.FULL_JOIN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.INNER_JOIN
+  name: INNER_JOIN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_INNER_JOIN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.INNER_JOIN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.INNER_JOIN
+  nameWithType: JoinOperators.INNER_JOIN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.LEFT_JOIN
+  name: LEFT_JOIN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_LEFT_JOIN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.LEFT_JOIN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.LEFT_JOIN
+  nameWithType: JoinOperators.LEFT_JOIN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.RIGHT_JOIN
+  name: RIGHT_JOIN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_RIGHT_JOIN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.RIGHT_JOIN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.RIGHT_JOIN
+  nameWithType: JoinOperators.RIGHT_JOIN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.SELF_JOIN
+  name: SELF_JOIN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_SELF_JOIN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.SELF_JOIN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.SELF_JOIN
+  nameWithType: JoinOperators.SELF_JOIN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators
+  name: LogicalOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators
+  nameWithType: LogicalOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.AND
+  name: AND
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_LogicalOperators_AND
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.AND
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.AND
+  nameWithType: LogicalOperators.AND
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.NOT
+  name: NOT
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_LogicalOperators_NOT
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.NOT
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.NOT
+  nameWithType: LogicalOperators.NOT
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.OR
+  name: OR
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_LogicalOperators_OR
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.OR
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.OR
+  nameWithType: LogicalOperators.OR
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators
+  name: NullOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators
+  nameWithType: NullOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.IS_NOT_NULL
+  name: IS_NOT_NULL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_IS_NOT_NULL
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.IS_NOT_NULL
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.IS_NOT_NULL
+  nameWithType: NullOperators.IS_NOT_NULL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.IS_NULL
+  name: IS_NULL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_IS_NULL
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.IS_NULL
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.IS_NULL
+  nameWithType: NullOperators.IS_NULL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection
+  name: OrderDirection
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection
+  nameWithType: OrderDirection
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.ASC
+  name: ASC
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.html#DynamicQueryBuilder_Models_Enums_SqlOperators_OrderDirection_ASC
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.ASC
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.ASC
+  nameWithType: OrderDirection.ASC
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.DESC
+  name: DESC
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.html#DynamicQueryBuilder_Models_Enums_SqlOperators_OrderDirection_DESC
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.DESC
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.DESC
+  nameWithType: OrderDirection.DESC
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators
+  name: RangeOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators
+  nameWithType: RangeOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.BETWEEN
+  name: BETWEEN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_BETWEEN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.BETWEEN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.BETWEEN
+  nameWithType: RangeOperators.BETWEEN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.NOT_BETWEEN
+  name: NOT_BETWEEN
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_NOT_BETWEEN
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.NOT_BETWEEN
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.NOT_BETWEEN
+  nameWithType: RangeOperators.NOT_BETWEEN
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators
+  name: SetOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators
+  nameWithType: SetOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.EXCEPT
+  name: EXCEPT
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_SetOperators_EXCEPT
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.EXCEPT
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.EXCEPT
+  nameWithType: SetOperators.EXCEPT
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.INTERSECT
+  name: INTERSECT
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_SetOperators_INTERSECT
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.INTERSECT
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.INTERSECT
+  nameWithType: SetOperators.INTERSECT
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.UNION
+  name: UNION
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_SetOperators_UNION
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.UNION
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.UNION
+  nameWithType: SetOperators.UNION
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.UNION_ALL
+  name: UNION_ALL
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_SetOperators_UNION_ALL
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.UNION_ALL
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.UNION_ALL
+  nameWithType: SetOperators.UNION_ALL
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators
+  name: StringOperators
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.html
+  commentId: T:DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators
+  nameWithType: StringOperators
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.CONCAT
+  name: CONCAT
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_CONCAT
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.CONCAT
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.CONCAT
+  nameWithType: StringOperators.CONCAT
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.ILIKE
+  name: ILIKE
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_ILIKE
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.ILIKE
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.ILIKE
+  nameWithType: StringOperators.ILIKE
+- uid: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.LIKE
+  name: LIKE
+  href: docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.html#DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_LIKE
+  commentId: F:DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.LIKE
+  fullName: DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.LIKE
+  nameWithType: StringOperators.LIKE
 - uid: DynamicQueryBuilder.Models.Helpers
   name: DynamicQueryBuilder.Models.Helpers
   href: docs/api/DynamicQueryBuilder.Models.Helpers.html
@@ -272,3 +1133,54 @@ references:
   isSpec: "True"
   fullName: DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.RelatedTable
   nameWithType: DatabaseTablesMetaData.RelatedTable
+- uid: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings
+  name: DynamicQueryBuilderSettings
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html
+  commentId: T:DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings
+  fullName: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings
+  nameWithType: DynamicQueryBuilderSettings
+- uid: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.#ctor(System.String,DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  name: DynamicQueryBuilderSettings(string, DatabaseDriver)
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html#DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings__ctor_System_String_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_
+  commentId: M:DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.#ctor(System.String,DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  name.vb: New(String, DatabaseDriver)
+  fullName: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DynamicQueryBuilderSettings(string, DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  fullName.vb: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.New(String, DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)
+  nameWithType: DynamicQueryBuilderSettings.DynamicQueryBuilderSettings(string, DatabaseDriver)
+  nameWithType.vb: DynamicQueryBuilderSettings.New(String, DatabaseDriver)
+- uid: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.#ctor*
+  name: DynamicQueryBuilderSettings
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html#DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings__ctor_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DynamicQueryBuilderSettings
+  fullName.vb: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.New
+  nameWithType: DynamicQueryBuilderSettings.DynamicQueryBuilderSettings
+  nameWithType.vb: DynamicQueryBuilderSettings.New
+- uid: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString
+  name: ConnectionString
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html#DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_ConnectionString
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString
+  fullName: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString
+  nameWithType: DynamicQueryBuilderSettings.ConnectionString
+- uid: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString*
+  name: ConnectionString
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html#DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_ConnectionString_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString
+  nameWithType: DynamicQueryBuilderSettings.ConnectionString
+- uid: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver
+  name: DatabaseDriver
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html#DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_DatabaseDriver
+  commentId: P:DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver
+  fullName: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver
+  nameWithType: DynamicQueryBuilderSettings.DatabaseDriver
+- uid: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver*
+  name: DatabaseDriver
+  href: docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html#DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_DatabaseDriver_
+  commentId: Overload:DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver
+  isSpec: "True"
+  fullName: DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver
+  nameWithType: DynamicQueryBuilderSettings.DatabaseDriver

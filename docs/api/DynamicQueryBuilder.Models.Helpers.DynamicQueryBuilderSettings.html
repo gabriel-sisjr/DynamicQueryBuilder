@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class GetDatabaseMetaData </title>
+      <title>Class DynamicQueryBuilderSettings </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class GetDatabaseMetaData ">
+      <meta name="title" content="Class DynamicQueryBuilderSettings ">
       
-      <meta name="description" content="Get the metadata of the database tables.">
+      <meta name="description" content="Configuration Object to initialize the library.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/develop/apiSpec/new?filename=DynamicQueryBuilder_Databases_GetDatabaseMetaData.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.Databases.GetDatabaseMetaData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/5/merge/apiSpec/new?filename=DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="DynamicQueryBuilder.Databases.GetDatabaseMetaData">
+        <article data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings">
 
 
 
-  <h1 id="DynamicQueryBuilder_Databases_GetDatabaseMetaData" data-uid="DynamicQueryBuilder.Databases.GetDatabaseMetaData" class="text-break">
-Class GetDatabaseMetaData  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Databases/GetDatabaseMetaData.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h1 id="DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings" data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings" class="text-break">
+Class DynamicQueryBuilderSettings  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Helpers/DynamicQueryBuilderSettings.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="DynamicQueryBuilder.html">DynamicQueryBuilder</a>.<a class="xref" href="DynamicQueryBuilder.Databases.html">Databases</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DynamicQueryBuilder.html">DynamicQueryBuilder</a>.<a class="xref" href="DynamicQueryBuilder.Models.html">Models</a>.<a class="xref" href="DynamicQueryBuilder.Models.Helpers.html">Helpers</a></dd></dl>
   <dl><dt>Assembly</dt><dd>DynamicQueryBuilder.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Get the metadata of the database tables.</p>
+  <div class="markdown summary"><p>Configuration Object to initialize the library.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetDatabaseMetaData : IGetDatabaseMetaData</code></pre>
+    <pre><code class="lang-csharp hljs">public record DynamicQueryBuilderSettings : IEquatable&lt;DynamicQueryBuilderSettings&gt;</code></pre>
   </div>
 
 
@@ -112,14 +112,14 @@ Class GetDatabaseMetaData  <a class="header-action link-secondary" title="View s
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">GetDatabaseMetaData</span></div>
+      <div><span class="xref">DynamicQueryBuilderSettings</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html">IGetDatabaseMetaData</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html">DynamicQueryBuilderSettings</a>&gt;</div>
     </dd>
   </dl>
 
@@ -140,6 +140,9 @@ Class GetDatabaseMetaData  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
@@ -156,24 +159,100 @@ Class GetDatabaseMetaData  <a class="header-action link-secondary" title="View s
 </h2>
 
 
-  <a id="DynamicQueryBuilder_Databases_GetDatabaseMetaData__ctor_" data-uid="DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor*"></a>
+  <a id="DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings__ctor_" data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.#ctor*"></a>
 
-  <h3 id="DynamicQueryBuilder_Databases_GetDatabaseMetaData__ctor_System_String_" data-uid="DynamicQueryBuilder.Databases.GetDatabaseMetaData.#ctor(System.String)">
-  GetDatabaseMetaData(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Databases/GetDatabaseMetaData.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings__ctor_System_String_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_" data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.#ctor(System.String,DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)">
+  DynamicQueryBuilderSettings(string, DatabaseDriver)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Helpers/DynamicQueryBuilderSettings.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get the metadata of the database tables.</p>
+  <div class="markdown level1 summary"><p>Configuration Object to initialize the library.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GetDatabaseMetaData(string connectionString)</code></pre>
+    <pre><code class="lang-csharp hljs">public DynamicQueryBuilderSettings(string ConnectionString, DatabaseDriver DatabaseDriver)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>ConnectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Database connection string.</p>
+</dd>
+    <dt><code>DatabaseDriver</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html">DatabaseDriver</a></dt>
+    <dd><p>Database Driver.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_ConnectionString_" data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString*"></a>
+
+  <h3 id="DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_ConnectionString" data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.ConnectionString">
+  ConnectionString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Helpers/DynamicQueryBuilderSettings.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Database connection string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConnectionString { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_DatabaseDriver_" data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver*"></a>
+
+  <h3 id="DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_DatabaseDriver" data-uid="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.DatabaseDriver">
+  DatabaseDriver
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Helpers/DynamicQueryBuilderSettings.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Database Driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DatabaseDriver DatabaseDriver { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html">DatabaseDriver</a></dt>
     <dd></dd>
   </dl>
 
@@ -185,63 +264,10 @@ Class GetDatabaseMetaData  <a class="header-action link-secondary" title="View s
 
 
 
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="DynamicQueryBuilder_Databases_GetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_" data-uid="DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync*"></a>
-
-  <h3 id="DynamicQueryBuilder_Databases_GetDatabaseMetaData_GetDatabaseTablesMetaDataAsync_DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_" data-uid="DynamicQueryBuilder.Databases.GetDatabaseMetaData.GetDatabaseTablesMetaDataAsync(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)">
-  GetDatabaseTablesMetaDataAsync(DatabaseDriver)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Databases/GetDatabaseMetaData.cs/#L21"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Get the metadata of the database tables.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Dictionary&lt;string, Dictionary&lt;string, List&lt;DatabaseTablesMetaData&gt;&gt;&gt;&gt; GetDatabaseTablesMetaDataAsync(DatabaseDriver driver)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>driver</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.html">DatabaseDriver</a></dt>
-    <dd><p>The database driver.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.html">DatabaseTablesMetaData</a>&gt;&gt;&gt;&gt;</dt>
-    <dd><p>A dictionary of schemas and tables with their metadata.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown when unable to create a command.</p>
-</dd>
-  </dl>
-
-
-
-
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Databases/GetDatabaseMetaData.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Helpers/DynamicQueryBuilderSettings.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

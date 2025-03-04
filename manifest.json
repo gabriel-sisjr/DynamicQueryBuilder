@@ -32,30 +32,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.yml",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Builders.QueryBuilder.yml",
       "output": {
         ".html": {
-          "relative_path": "docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.html"
+          "relative_path": "docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "DynamicQueryBuilder.Databases.GetDatabaseMetaData",
-      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Databases.GetDatabaseMetaData.yml\" sourcestartlinenumber=\"1\">Get the metadata of the database tables.</p>\n"
+      "Title": "DynamicQueryBuilder.Builders.QueryBuilder",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Builders.QueryBuilder.yml\" sourcestartlinenumber=\"1\">Implements the IQueryBuilder interface to build SQL queries fluently.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docs/api/DynamicQueryBuilder.Databases.yml",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Builders.yml",
       "output": {
         ".html": {
-          "relative_path": "docs/api/DynamicQueryBuilder.Databases.html"
+          "relative_path": "docs/api/DynamicQueryBuilder.Builders.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "DynamicQueryBuilder.Databases",
+      "Title": "DynamicQueryBuilder.Builders",
       "Summary": null
     },
     {
@@ -99,6 +99,48 @@
       "IsMRef": true,
       "Title": "DynamicQueryBuilder.DynamicQueryBuilderModule",
       "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.DynamicQueryBuilderModule.yml\" sourcestartlinenumber=\"1\">Module for adding Dynamic Query Builder services.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.yml\" sourcestartlinenumber=\"1\">Defines a builder for constructing SQL queries.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.yml\" sourcestartlinenumber=\"1\">Provides the initial setup functionality for the dynamic query builder.\nThis interface enforces that the necessary database metadata is provided\nbefore any query construction methods become available.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Builders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Interfaces.Builders.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Interfaces.Builders",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -158,6 +200,174 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ArithmeticOperators.yml\" sourcestartlinenumber=\"1\">Represents the arithmetic operators in SQL.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL comparison operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.yml\" sourcestartlinenumber=\"1\">Represents a filter clause in SQL.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL inclusion operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL join operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL logical operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL null operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.yml\" sourcestartlinenumber=\"1\">Specifies the order direction for ordering clauses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL range operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.SetOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL set operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.yml\" sourcestartlinenumber=\"1\">Represents SQL string operators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Enums.SqlOperators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Enums.SqlOperators",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.yml",
       "output": {
         ".html": {
@@ -169,6 +379,20 @@
       "IsMRef": true,
       "Title": "DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData",
       "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.yml\" sourcestartlinenumber=\"1\">Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings",
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.yml\" sourcestartlinenumber=\"1\">Configuration Object to initialize the library.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DynamicQueryBuilderModule </title>
+      <title>Class FilterClause </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DynamicQueryBuilderModule ">
+      <meta name="title" content="Class FilterClause ">
       
-      <meta name="description" content="Module for adding Dynamic Query Builder services.">
+      <meta name="description" content="Represents a filter clause in SQL.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/5/merge/apiSpec/new?filename=DynamicQueryBuilder_DynamicQueryBuilderModule.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.DynamicQueryBuilderModule%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/5/merge/apiSpec/new?filename=DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule">
+        <article data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause">
 
 
 
-  <h1 id="DynamicQueryBuilder_DynamicQueryBuilderModule" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule" class="text-break">
-Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h1 id="DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause" data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause" class="text-break">
+Class FilterClause  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Enums/SqlOperators/FilterClause.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="DynamicQueryBuilder.html">DynamicQueryBuilder</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DynamicQueryBuilder.html">DynamicQueryBuilder</a>.<a class="xref" href="DynamicQueryBuilder.Models.html">Models</a>.<a class="xref" href="DynamicQueryBuilder.Models.Enums.html">Enums</a>.<a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.html">SqlOperators</a></dd></dl>
   <dl><dt>Assembly</dt><dd>DynamicQueryBuilder.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Module for adding Dynamic Query Builder services.</p>
+  <div class="markdown summary"><p>Represents a filter clause in SQL.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class DynamicQueryBuilderModule</code></pre>
+    <pre><code class="lang-csharp hljs">public record FilterClause : IEquatable&lt;FilterClause&gt;</code></pre>
   </div>
 
 
@@ -112,10 +112,16 @@ Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">DynamicQueryBuilderModule</span></div>
+      <div><span class="xref">FilterClause</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.html">FilterClause</a>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -149,44 +155,106 @@ Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
-  <a id="DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder*"></a>
+  <a id="DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause__ctor_" data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.#ctor*"></a>
 
-  <h3 id="DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings)">
-  AddDynamicQueryBuilder(IServiceCollection, DynamicQueryBuilderSettings)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause__ctor_DynamicQueryBuilder_Models_Enums_SqlOperators_LogicalOperators_System_String_" data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.#ctor(DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators,System.String)">
+  FilterClause(LogicalOperators, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Enums/SqlOperators/FilterClause.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds Dynamic Query Builder services to the service collection.</p>
+  <div class="markdown level1 summary"><p>Represents a filter clause in SQL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddDynamicQueryBuilder(this IServiceCollection services, DynamicQueryBuilderSettings settings)</code></pre>
+    <pre><code class="lang-csharp hljs">public FilterClause(LogicalOperators JoinOperator, string Condition)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The service collection.</p>
+    <dt><code>JoinOperator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.html">LogicalOperators</a></dt>
+    <dd><p>The logical operator to join the condition.</p>
 </dd>
-    <dt><code>settings</code> <a class="xref" href="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html">DynamicQueryBuilderSettings</a></dt>
-    <dd><p>Settings object containing Connection String and Driver definition.</p>
+    <dt><code>Condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The condition to filter the data.</p>
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_Condition_" data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition*"></a>
+
+  <h3 id="DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_Condition" data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.Condition">
+  Condition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Enums/SqlOperators/FilterClause.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The condition to filter the data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Condition { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The service collection.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
   </dl>
 
 
 
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_JoinOperator_" data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator*"></a>
+
+  <h3 id="DynamicQueryBuilder_Models_Enums_SqlOperators_FilterClause_JoinOperator" data-uid="DynamicQueryBuilder.Models.Enums.SqlOperators.FilterClause.JoinOperator">
+  JoinOperator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Enums/SqlOperators/FilterClause.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The logical operator to join the condition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogicalOperators JoinOperator { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.LogicalOperators.html">LogicalOperators</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -199,7 +267,7 @@ Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Models/Enums/SqlOperators/FilterClause.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IQueryBuilder </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IQueryBuilder ">
+      
+      <meta name="description" content="Defines a builder for constructing SQL queries.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/5/merge/apiSpec/new?filename=DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder">
+
+
+
+  <h1 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder" class="text-break">
+Interface IQueryBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DynamicQueryBuilder.html">DynamicQueryBuilder</a>.<a class="xref" href="DynamicQueryBuilder.Interfaces.html">Interfaces</a>.<a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.html">Builders</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DynamicQueryBuilder.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines a builder for constructing SQL queries.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IQueryBuilder</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Columns_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Columns_System_String___" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Columns(System.String[])">
+  Columns(params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specifies the columns to select in the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder Columns(params string[] columns)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>columns</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>An array of column names.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)">
+  FilterBy(string, ComparisonOperators, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition to the query using a comparison operator with AND.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder FilterBy(string column, ComparisonOperators @operator, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html">ComparisonOperators</a></dt>
+    <dd><p>The comparison operator.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value for the filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_System_Collections_Generic_IEnumerable_System_String__" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})">
+  FilterBy(string, InclusionOperators, IEnumerable&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition for inclusion operators (IN, NOT IN) with AND.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder FilterBy(string column, InclusionOperators @operator, IEnumerable&lt;string&gt; values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.html">InclusionOperators</a></dt>
+    <dd><p>The inclusion operator.</p>
+</dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The values for the filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)">
+  FilterBy(string, NullOperators)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition for null checks with AND.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder FilterBy(string column, NullOperators @operator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.html">NullOperators</a></dt>
+    <dd><p>The null operator.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_System_String_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)">
+  FilterBy(string, RangeOperators, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition for range checks (BETWEEN, NOT BETWEEN) with AND.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder FilterBy(string column, RangeOperators @operator, string start, string end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.html">RangeOperators</a></dt>
+    <dd><p>The range operator.</p>
+</dd>
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start value of the range.</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end value of the range.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)">
+  FilterBy(string, StringOperators, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition using a string operator (LIKE, ILIKE) with AND.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder FilterBy(string column, StringOperators @operator, string pattern)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.html">StringOperators</a></dt>
+    <dd><p>The string operator for filtering.</p>
+</dd>
+    <dt><code>pattern</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The pattern to match.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FilterBy_System_String_System_String_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FilterBy(System.String,System.String,System.String)">
+  FilterBy(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition to the query using a raw string operator with AND.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder FilterBy(string column, string @operator, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The operator as a string.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value for the filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FromTable_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_FromTable_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.FromTable(System.String)">
+  FromTable(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specifies the table from which to select data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder FromTable(string table)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>table</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the table.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateFormattedSql_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateFormattedSql" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql">
+  GenerateFormattedSql()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a formatted SQL query with proper line breaks and indentation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GenerateFormattedSql()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A SQL query string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the table is undefined or not present in the provided database information.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateSql_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GenerateSql" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql">
+  GenerateSql()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates the complete SQL query string based on the specified clauses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GenerateSql()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A SQL query string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the table is undefined or not present in the provided database information.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GroupBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_GroupBy_System_String___" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GroupBy(System.String[])">
+  GroupBy(params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specifies the GROUP BY clause for the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder GroupBy(params string[] columns)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>columns</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>An array of column names to group by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Join_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_Join_DynamicQueryBuilder_Models_Enums_SqlOperators_JoinOperators_System_String_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.Join(DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators,System.String,System.String)">
+  Join(JoinOperators, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a JOIN clause to the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder Join(JoinOperators type, string table, string condition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html">JoinOperators</a></dt>
+    <dd><p>The type of join represented by a <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.JoinOperators.html">JoinOperators</a> enum.</p>
+</dd>
+    <dt><code>table</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The table to join.</p>
+</dd>
+    <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The condition on which to join.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_ComparisonOperators_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators,System.String)">
+  OrFilterBy(string, ComparisonOperators, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition to the query using a comparison operator with OR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrFilterBy(string column, ComparisonOperators @operator, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.ComparisonOperators.html">ComparisonOperators</a></dt>
+    <dd><p>The comparison operator.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value for the filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_InclusionOperators_System_Collections_Generic_IEnumerable_System_String__" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators,System.Collections.Generic.IEnumerable{System.String})">
+  OrFilterBy(string, InclusionOperators, IEnumerable&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition for inclusion operators (IN, NOT IN) with OR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrFilterBy(string column, InclusionOperators @operator, IEnumerable&lt;string&gt; values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.InclusionOperators.html">InclusionOperators</a></dt>
+    <dd><p>The inclusion operator.</p>
+</dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The values for the filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_NullOperators_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators)">
+  OrFilterBy(string, NullOperators)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition for null checks with OR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrFilterBy(string column, NullOperators @operator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.NullOperators.html">NullOperators</a></dt>
+    <dd><p>The null operator.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_RangeOperators_System_String_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators,System.String,System.String)">
+  OrFilterBy(string, RangeOperators, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition for range checks (BETWEEN, NOT BETWEEN) with OR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrFilterBy(string column, RangeOperators @operator, string start, string end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.RangeOperators.html">RangeOperators</a></dt>
+    <dd><p>The range operator.</p>
+</dd>
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start value of the range.</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end value of the range.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_StringOperators_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators,System.String)">
+  OrFilterBy(string, StringOperators, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition using a string operator (LIKE, ILIKE) with OR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrFilterBy(string column, StringOperators @operator, string pattern)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.StringOperators.html">StringOperators</a></dt>
+    <dd><p>The string operator for filtering.</p>
+</dd>
+    <dt><code>pattern</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The pattern to match.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrFilterBy_System_String_System_String_System_String_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrFilterBy(System.String,System.String,System.String)">
+  OrFilterBy(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter condition to the query using a raw string operator with OR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrFilterBy(string column, string @operator, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name.</p>
+</dd>
+    <dt><code>operator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The operator as a string.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value for the filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrderBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrderBy_System_String_DynamicQueryBuilder_Models_Enums_SqlOperators_OrderDirection_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(System.String,DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection)">
+  OrderBy(string, OrderDirection)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specifies the ORDER BY clause for a single column with a specified direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrderBy(string column, OrderDirection direction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The column name to order by.</p>
+</dd>
+    <dt><code>direction</code> <a class="xref" href="DynamicQueryBuilder.Models.Enums.SqlOperators.OrderDirection.html">OrderDirection</a></dt>
+    <dd><p>The direction of ordering.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrderBy_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_OrderBy_System_String___" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.OrderBy(System.String[])">
+  OrderBy(params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specifies the ORDER BY clause for the query using default ordering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder OrderBy(params string[] columns)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>columns</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>An array of column names to order by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_SetLimit_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit*"></a>
+
+  <h3 id="DynamicQueryBuilder_Interfaces_Builders_IQueryBuilder_SetLimit_System_Int32_" data-uid="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.SetLimit(System.Int32)">
+  SetLimit(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Limits the number of records returned by the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryBuilder SetLimit(int limit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of records to return.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a></dt>
+    <dd><p>The current IQueryBuilder instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/5/merge/src/DynamicQueryBuilder/Interfaces/Builders/IQueryBuilder.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
