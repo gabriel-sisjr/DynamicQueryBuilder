@@ -21,14 +21,6 @@ dotnet add package DynamicQueryBuilder
 ```csharp
 var settings = new DynamicQueryBuilderSettings("Your connection string", DatabaseDriver.POSTGRESQL); // See available drivers.
 builder.Services.AddDynamicQueryBuilder(settings);
-
-// or
-
-builder.Services.AddDynamicQueryBuilder(settings =>
-{
-    settings.ConnectionString = "example";
-    settings.Driver = DatabaseDriver.POSTGRESQL;
-});
 ```
 
 2. Inject and use the service in your code:

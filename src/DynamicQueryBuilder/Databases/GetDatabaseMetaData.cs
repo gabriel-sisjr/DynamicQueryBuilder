@@ -8,21 +8,24 @@ using DynamicQueryBuilder.Models.Helpers;
 namespace DynamicQueryBuilder.Databases;
 
 /// <summary>
-/// Get the metadata of the database tables.
+///     Get the metadata of the database tables.
 /// </summary>
-public sealed class GetDatabaseMetaData(string connectionString) : IGetDatabaseMetaData
+internal sealed class GetDatabaseMetaData(DynamicQueryBuilderSettings queryBuilderSettings)
+    : IGetDatabaseMetaData
 {
     /// <summary>
-    /// Get the metadata of the database tables.
+    ///     Get the metadata of the database tables.
     /// </summary>
-    /// <param name="driver">The database driver.</param>
     /// <returns>A dictionary of schemas and tables with their metadata.</returns>
     /// <exception cref="InvalidOperationException">Thrown when unable to create a command.</exception>
-    public async Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>> GetDatabaseTablesMetaDataAsync(DatabaseDriver driver)
+    public async Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>>
+        GetDatabaseTablesMetaDataAsync()
     {
+        DatabaseDriver driver = queryBuilderSettings.DatabaseDriver;
         var schemaTablesDict = new Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>();
 
-        using IDbConnection conn = DriversFactory.GetDatabaseConnection(driver, connectionString);
+        using IDbConnection conn =
+            DriversFactory.GetDatabaseConnection(driver, queryBuilderSettings.ConnectionString);
         if (conn is DbConnection dbConn)
             await dbConn.OpenAsync();
         else

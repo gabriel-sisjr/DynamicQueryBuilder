@@ -6,12 +6,12 @@ using Npgsql;
 namespace DynamicQueryBuilder.Drivers;
 
 /// <summary>
-/// Factory class for creating database connections and metadata queries.
+///     Factory class for creating database connections and metadata queries.
 /// </summary>
 public static class DriversFactory
 {
     /// <summary>
-    /// Get a database connection.
+    ///     Get a database connection.
     /// </summary>
     /// <param name="driver">The database driver.</param>
     /// <param name="connectionString">The connection string.</param>
@@ -32,12 +32,13 @@ public static class DriversFactory
     }
 
     /// <summary>
-    /// Get the metadata query for a database driver.
+    ///     Get the metadata query for a database driver.
     /// </summary>
     /// <param name="driver">The database driver.</param>
     /// <returns>The metadata query.</returns>
     public static string GetMetadataQuery(DatabaseDriver driver)
-        => driver switch
+    {
+        return driver switch
         {
             DatabaseDriver.POSTGRESQL => """
                                          SELECT
@@ -76,4 +77,5 @@ public static class DriversFactory
                                     """,
             _ => throw new NotSupportedException("UNSUPPORTED DATABASE DRIVER.")
         };
+    }
 }

@@ -1,7 +1,7 @@
 namespace DynamicQueryBuilder.Models.Helpers;
 
 /// <summary>
-/// Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships.
+///     Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships.
 /// </summary>
 /// <param name="Column">The name of the column in the table.</param>
 /// <param name="ColumnType">The data type of the column.</param>
