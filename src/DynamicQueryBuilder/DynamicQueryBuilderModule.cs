@@ -13,7 +13,18 @@ public static class DynamicQueryBuilderModule
     /// Adds Dynamic Query Builder services to the service collection.
     /// </summary>
     /// <param name="services">The service collection.</param>
-    /// <param name="connectionString">The connection string.</param>
+    /// <param name="settings">
+    /// A <see cref="DynamicQueryBuilderSettings"/> object containing the connection string and database driver definition.
+    /// Example usage:
+    /// <code>
+    /// var settings = new DynamicQueryBuilderSettings
+    /// {
+    ///     ConnectionString = "example",
+    ///     Driver = DatabaseDriver.POSTGRESQL
+    /// };
+    /// builder.Services.AddDynamicQueryBuilder(settings);
+    /// </code>
+    /// </param>
     /// <returns>The service collection.</returns>
     public static IServiceCollection AddDynamicQueryBuilder(this IServiceCollection services, string connectionString)
     {

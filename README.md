@@ -1,5 +1,3 @@
-dotnet tool install -g docfx
-
 # DynamicQueryBuilder
 
 <!-- [![NuGet](https://img.shields.io/nuget/v/DynamicQueryBuilder.svg)](https://www.nuget.org/packages/DynamicQueryBuilder/) -->
