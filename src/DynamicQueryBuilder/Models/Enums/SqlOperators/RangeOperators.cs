@@ -1,7 +1,7 @@
 namespace DynamicQueryBuilder.Models.Enums.SqlOperators;
 
 /// <summary>
-/// Represents SQL range operators.
+///     Represents SQL range operators.
 /// </summary>
 public enum RangeOperators
 {

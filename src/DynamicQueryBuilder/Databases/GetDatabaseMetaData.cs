@@ -8,17 +8,18 @@ using DynamicQueryBuilder.Models.Helpers;
 namespace DynamicQueryBuilder.Databases;
 
 /// <summary>
-/// Get the metadata of the database tables.
+///     Get the metadata of the database tables.
 /// </summary>
 public sealed class GetDatabaseMetaData(string connectionString) : IGetDatabaseMetaData
 {
     /// <summary>
-    /// Get the metadata of the database tables.
+    ///     Get the metadata of the database tables.
     /// </summary>
     /// <param name="driver">The database driver.</param>
     /// <returns>A dictionary of schemas and tables with their metadata.</returns>
     /// <exception cref="InvalidOperationException">Thrown when unable to create a command.</exception>
-    public async Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>> GetDatabaseTablesMetaDataAsync(DatabaseDriver driver)
+    public async Task<Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>>
+        GetDatabaseTablesMetaDataAsync(DatabaseDriver driver)
     {
         var schemaTablesDict = new Dictionary<string, Dictionary<string, List<DatabaseTablesMetaData>>>();
 

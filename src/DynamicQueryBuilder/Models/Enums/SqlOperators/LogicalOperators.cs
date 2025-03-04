@@ -1,7 +1,7 @@
 namespace DynamicQueryBuilder.Models.Enums.SqlOperators;
 
 /// <summary>
-/// Represents SQL logical operators.
+///     Represents SQL logical operators.
 /// </summary>
 public enum LogicalOperators
 {

@@ -1,7 +1,7 @@
 namespace DynamicQueryBuilder.Models.Enums.SqlOperators;
 
 /// <summary>
-/// Represents the arithmetic operators in SQL.
+///     Represents the arithmetic operators in SQL.
 /// </summary>
 public enum ArithmeticOperators
 {

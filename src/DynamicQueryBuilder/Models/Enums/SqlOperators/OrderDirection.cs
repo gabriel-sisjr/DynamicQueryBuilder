@@ -1,7 +1,7 @@
 namespace DynamicQueryBuilder.Models.Enums.SqlOperators;
 
 /// <summary>
-/// Specifies the order direction for ordering clauses.
+///     Specifies the order direction for ordering clauses.
 /// </summary>
 public enum OrderDirection
 {
