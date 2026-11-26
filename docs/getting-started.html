@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>&#128230; Installation </title>
+      <title>Getting Started | DynamicQueryBuilder </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="&#128230; Installation ">
+      <meta name="title" content="Getting Started | DynamicQueryBuilder ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/docs/getting-started.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/docs/getting-started.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="">
-            
+            <img id="logo" class="svg" src="../logo.svg" alt="DynamicQueryBuilder">
+            DynamicQueryBuilder
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -85,26 +85,56 @@
         </div>
 
         <article data-uid="">
-<h1 id="-installation">📦 Installation</h1>
+<h1 id="getting-started">Getting Started</h1>
 
-<p>Install the package via NuGet Package Manager:</p>
-<pre><code class="lang-bash">PM&gt; Install-Package DynamicQueryBuilder
+<div class="WARNING">
+<h5>Warning</h5>
+<p><strong>Pre-alpha: don't use it in production.</strong></p>
+<ul>
+<li><strong>Not on NuGet.</strong> The library isn't published. The <code>DynamicQueryBuilder</code> package on nuget.org is an unrelated project.</li>
+<li><strong>The API will change.</strong> A rewrite is planned, and nothing here is stable.</li>
+<li><strong>No protection against SQL injection.</strong> Values, identifiers (table and column names), join conditions and operators are concatenated into the SQL text, with no parameters and no escaping. Never pass untrusted input. See the <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/SECURITY.md">security policy</a>.</li>
+<li><strong>Almost no validation.</strong> The only check on names is that the upper-cased <code>FROM</code> table is a key of the map passed to <code>Setup</code>. The column lists in that map are never read, and columns, joined tables, conditions and values aren't checked.</li>
+</ul>
+</div>
+<h2 id="-installation">📦 Installation</h2>
+<p>DynamicQueryBuilder is not published on NuGet yet. The <code>DynamicQueryBuilder</code> package on nuget.org belongs to an unrelated project, so don't install it expecting this library.</p>
+<p>To try it, clone the repository and add a project reference to <code>src/DynamicQueryBuilder/DynamicQueryBuilder.csproj</code>. The library targets <code>net8.0</code> and <code>net9.0</code>. From the folder that contains both the clone and your project:</p>
+<pre><code class="lang-bash">git clone https://github.com/gabriel-sisjr/DynamicQueryBuilder.git
+dotnet add YourApp/YourApp.csproj reference DynamicQueryBuilder/src/DynamicQueryBuilder/DynamicQueryBuilder.csproj
 </code></pre>
-<p>Or using .NET CLI:</p>
-<pre><code class="lang-bash">dotnet add package DynamicQueryBuilder
+<p>Or add the reference to your project file yourself:</p>
+<pre><code class="lang-xml">&lt;ItemGroup&gt;
+  &lt;ProjectReference Include=&quot;../DynamicQueryBuilder/src/DynamicQueryBuilder/DynamicQueryBuilder.csproj&quot; /&gt;
+&lt;/ItemGroup&gt;
 </code></pre>
-<h1 id="-usage">🛠 Usage</h1>
-<h2 id="setting-up-dynamicquerybuilder">Setting Up DynamicQueryBuilder</h2>
+<h2 id="-usage">🛠 Usage</h2>
+<h3 id="setting-up-dynamicquerybuilder">Setting Up DynamicQueryBuilder</h3>
 <ol>
-<li>Add DynamicQueryBuilder to your services in <code>Program.cs</code>:</li>
+<li>Register the services in <code>Program.cs</code>. <code>AddDynamicQueryBuilder</code> takes a <code>DynamicQueryBuilderSettings</code> with the connection string and the database driver:</li>
 </ol>
-<pre><code class="lang-csharp">var settings = new DynamicQueryBuilderSettings(&quot;Your connection string&quot;, DatabaseDriver.POSTGRESQL); // See available drivers.
-builder.Services.AddDynamicQueryBuilder(settings);
+<pre><code class="lang-csharp">using DynamicQueryBuilder;
+using DynamicQueryBuilder.Models.Enums.Helpers.Databases;
+using DynamicQueryBuilder.Models.Helpers;
+
+var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString(&quot;DynamicQueryBuilder&quot;)
+    ?? throw new InvalidOperationException(&quot;Connection string 'DynamicQueryBuilder' is not set.&quot;);
+
+builder.Services.AddDynamicQueryBuilder(
+    new DynamicQueryBuilderSettings(connectionString, DatabaseDriver.POSTGRESQL));
 </code></pre>
+<p>This registers two scoped services: the metadata reader (<code>IGetDatabaseMetaData</code>) and a query builder (<code>IQueryBuilderSetup</code>). <code>IQueryBuilder</code> itself isn't registered.</p>
 <ol start="2">
-<li>Inject and use the service in your code:</li>
+<li>Inject the metadata reader where you need it. <code>GetDatabaseTablesMetaDataAsync</code> takes no arguments; the driver comes from the settings:</li>
 </ol>
-<pre><code class="lang-csharp">public class YourController : ControllerBase
+<pre><code class="lang-csharp">using DynamicQueryBuilder.Interfaces.Helpers;
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route(&quot;api/[controller]&quot;)]
+public class YourController : ControllerBase
 {
     private readonly IGetDatabaseMetaData _getDatabaseMetaData;
 
@@ -116,6 +146,7 @@ builder.Services.AddDynamicQueryBuilder(settings);
     /*
     * This method will return your schema tables metadata.
     */
+    [HttpGet]
     public async Task&lt;IActionResult&gt; GetDatabaseMetadata()
     {
         var metadata = await _getDatabaseMetaData.GetDatabaseTablesMetaDataAsync();
@@ -123,75 +154,135 @@ builder.Services.AddDynamicQueryBuilder(settings);
     }
 }
 </code></pre>
-<h2 id="method-response">Method Response</h2>
-<p>The method returns a structured JSON containing information about various entities in the system. Each table is organized based in the schema, and each contains an array of columns, where each column provides details such as:</p>
+<p>The result describes your database schema, so don't expose it without authentication.</p>
+<h3 id="method-response">Method Response</h3>
+<p>The method returns a dictionary of schema name → table name → a list of column entries, with names in the database's own casing. Each entry has:</p>
 <ul>
 <li><strong>Column name (<code>column</code>)</strong></li>
 <li><strong>Data type (<code>columnType</code>)</strong></li>
-<li><strong>Primary key status (<code>primaryKey</code>)</strong></li>
-<li><strong>Relationships with other tables (<code>relatedSchema</code>, <code>relatedTable</code>, <code>relatedColumn</code>)</strong></li>
+<li><strong><code>primaryKey</code></strong>, which despite its name doesn't tell you whether the column is part of the primary key. This is a known defect. On PostgreSQL it holds the column's default expression (<code>column_default</code>), or <code>null</code> when the column has no default. In the example below, <code>users.id</code> is a <code>serial</code> primary key and shows its <code>nextval(...)</code> default, <code>orders.id</code> is an identity primary key and shows <code>null</code>, and <code>orders.total_amount</code> isn't a key but shows its default, <code>0</code>. On MySQL the field is meant to hold <code>COLUMN_KEY</code> (<code>PRI</code>, <code>UNI</code>, <code>MUL</code> or empty), but the MySQL catalog query currently fails before returning anything, with <code>Column 'TABLE_SCHEMA' in field list is ambiguous</code>.</li>
+<li><strong>Foreign-key target (<code>relatedSchema</code>, <code>relatedTable</code>, <code>relatedColumn</code>)</strong>, or <code>null</code> when the column isn't a foreign key or the connecting role doesn't own the tables. PostgreSQL shows foreign-key targets only to the tables' owner, even if another role has every table privilege.</li>
 </ul>
-<h3 id="example-of-returned-structure">Example of Returned Structure:</h3>
+<p>Usually there's one entry per column. Columns in a composite foreign key, or in more than one foreign key, get one entry per target column, including wrong pairings: with a two-column key, each column is paired with both target columns.</p>
+<p>The rows aren't sorted, so the column order isn't predictable: it can differ between two databases with the same tables.</p>
+<h4 id="example-of-returned-structure">Example of Returned Structure</h4>
+<p>The reader's result for a PostgreSQL database with these two tables, as JSON:</p>
+<pre><code class="lang-sql">CREATE TABLE users (
+    id    serial PRIMARY KEY,
+    name  varchar(100) NOT NULL,
+    email text UNIQUE
+);
+CREATE TABLE orders (
+    id           bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id      integer NOT NULL REFERENCES users (id),
+    total_amount numeric(10, 2) NOT NULL DEFAULT 0
+);
+</code></pre>
 <pre><code class="lang-json">{
-  &quot;SCHEMA_NAME&quot;: {
-    &quot;EXAMPLE_TABLE&quot;: [
+  &quot;public&quot;: {
+    &quot;orders&quot;: [
       {
-        &quot;column&quot;: &quot;ID&quot;,
+        &quot;column&quot;: &quot;id&quot;,
         &quot;columnType&quot;: &quot;bigint&quot;,
-        &quot;primaryKey&quot;: &quot;nextval('\&quot;EXAMPLE_TABLE_ID_seq\&quot;'::regclass)&quot;,
+        &quot;primaryKey&quot;: null,
         &quot;relatedSchema&quot;: null,
         &quot;relatedTable&quot;: null,
         &quot;relatedColumn&quot;: null
       },
       {
-        &quot;column&quot;: &quot;NAME&quot;,
+        &quot;column&quot;: &quot;user_id&quot;,
+        &quot;columnType&quot;: &quot;integer&quot;,
+        &quot;primaryKey&quot;: null,
+        &quot;relatedSchema&quot;: &quot;public&quot;,
+        &quot;relatedTable&quot;: &quot;users&quot;,
+        &quot;relatedColumn&quot;: &quot;id&quot;
+      },
+      {
+        &quot;column&quot;: &quot;total_amount&quot;,
+        &quot;columnType&quot;: &quot;numeric&quot;,
+        &quot;primaryKey&quot;: &quot;0&quot;,
+        &quot;relatedSchema&quot;: null,
+        &quot;relatedTable&quot;: null,
+        &quot;relatedColumn&quot;: null
+      }
+    ],
+    &quot;users&quot;: [
+      {
+        &quot;column&quot;: &quot;id&quot;,
+        &quot;columnType&quot;: &quot;integer&quot;,
+        &quot;primaryKey&quot;: &quot;nextval('users_id_seq'::regclass)&quot;,
+        &quot;relatedSchema&quot;: null,
+        &quot;relatedTable&quot;: null,
+        &quot;relatedColumn&quot;: null
+      },
+      {
+        &quot;column&quot;: &quot;email&quot;,
+        &quot;columnType&quot;: &quot;text&quot;,
+        &quot;primaryKey&quot;: null,
+        &quot;relatedSchema&quot;: null,
+        &quot;relatedTable&quot;: null,
+        &quot;relatedColumn&quot;: null
+      },
+      {
+        &quot;column&quot;: &quot;name&quot;,
         &quot;columnType&quot;: &quot;character varying&quot;,
         &quot;primaryKey&quot;: null,
         &quot;relatedSchema&quot;: null,
         &quot;relatedTable&quot;: null,
         &quot;relatedColumn&quot;: null
-      },
-      {
-        &quot;column&quot;: &quot;RELATED_ID&quot;,
-        &quot;columnType&quot;: &quot;bigint&quot;,
-        &quot;primaryKey&quot;: null,
-        &quot;relatedSchema&quot;: &quot;public&quot;,
-        &quot;relatedTable&quot;: &quot;ANOTHER_TABLE&quot;,
-        &quot;relatedColumn&quot;: &quot;ID&quot;
       }
     ]
   }
 }
 </code></pre>
-<h2 id="building-queries">Building Queries</h2>
-<h3 id="basic-select-query">Basic SELECT Query</h3>
-<pre><code class="lang-csharp">var query = queryBuilder
+<p>This isn't the shape <code>Setup</code> takes (upper-case table name → column names), so you build the <code>Setup</code> map yourself.</p>
+<h3 id="building-queries">Building Queries</h3>
+<p>You get a builder from <code>QueryBuilder.Create()</code>, from <code>new QueryBuilder()</code>, or as <code>IQueryBuilderSetup</code> from dependency injection. Either way, call <code>Setup</code> first: it takes a map of table names to column names. <code>GenerateSql</code> and <code>GenerateFormattedSql</code> throw <code>InvalidOperationException</code> if <code>Setup</code> wasn't called or if the <code>FROM</code> table isn't a key of the map. That's the only check: the column lists are never read.</p>
+<p><code>FromTable</code> upper-cases the table name before that lookup, so the keys must be upper-case. With <code>[&quot;Users&quot;]</code> instead of <code>[&quot;USERS&quot;]</code>, <code>GenerateSql</code> throws <code>Undefined or Invalid table.</code> A dictionary created with <code>StringComparer.OrdinalIgnoreCase</code> accepts either.</p>
+<p>The samples below use <code>QueryBuilder.Create()</code> and this map:</p>
+<pre><code class="lang-csharp">using DynamicQueryBuilder.Builders;
+using DynamicQueryBuilder.Models.Enums.SqlOperators;
+
+var tables = new Dictionary&lt;string, List&lt;string&gt;&gt;
+{
+    [&quot;USERS&quot;] = [&quot;Id&quot;, &quot;Name&quot;, &quot;Email&quot;, &quot;Age&quot;],
+    [&quot;ORDERS&quot;] = [&quot;Id&quot;, &quot;UserId&quot;, &quot;TotalAmount&quot;]
+};
+</code></pre>
+<p>The builder is mutable. <code>Columns</code>, <code>Join</code>, the filters, <code>GroupBy</code> and <code>OrderBy</code> add to what's already there, while <code>FromTable</code>, <code>SetLimit</code> and <code>Setup</code> replace their value, so a reused builder carries parts of the previous query into the next one. The <code>IQueryBuilderSetup</code> from dependency injection is one instance per scope, so everything that resolves it while handling the same request shares it, filters included. When you need isolation, use <code>QueryBuilder.Create()</code> for each query.</p>
+<h4 id="basic-select-query">Basic SELECT Query</h4>
+<pre><code class="lang-csharp">var sql = QueryBuilder.Create()
+    .Setup(tables)
     .FromTable(&quot;Users&quot;)
     .Columns(&quot;Id&quot;, &quot;Name&quot;, &quot;Email&quot;)
     .GenerateSql();
 // Output: SELECT Id, Name, Email FROM USERS
 </code></pre>
-<h3 id="adding-where-filters">Adding WHERE Filters</h3>
-<pre><code class="lang-csharp">var query = queryBuilder
+<h4 id="adding-where-filters">Adding WHERE Filters</h4>
+<pre><code class="lang-csharp">var sql = QueryBuilder.Create()
+    .Setup(tables)
     .FromTable(&quot;Users&quot;)
     .Columns(&quot;Id&quot;, &quot;Name&quot;)
     .FilterBy(&quot;Age&quot;, ComparisonOperators.GREATER_THAN, &quot;18&quot;)
     .GenerateSql();
 // Output: SELECT Id, Name FROM USERS WHERE Age &gt; 18
 </code></pre>
-<h3 id="using-joins">Using JOINs</h3>
-<pre><code class="lang-csharp">var query = queryBuilder
+<p>The value is copied into the SQL as written. To compare with a string, pass the quotes yourself (<code>&quot;'Alice'&quot;</code>); nothing is escaped.</p>
+<h4 id="using-joins">Using JOINs</h4>
+<pre><code class="lang-csharp">var sql = QueryBuilder.Create()
+    .Setup(tables)
     .FromTable(&quot;Users&quot;)
     .Columns(&quot;Users.Id&quot;, &quot;Users.Name&quot;, &quot;Orders.TotalAmount&quot;)
     .Join(JoinOperators.INNER_JOIN, &quot;Orders&quot;, &quot;Users.Id = Orders.UserId&quot;)
     .GenerateSql();
 // Output: SELECT Users.Id, Users.Name, Orders.TotalAmount FROM USERS INNER JOIN Orders ON Users.Id = Orders.UserId
 </code></pre>
+<p>Only <code>FROM</code> is checked against the map: the joined table, the column names and the condition are copied as written.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

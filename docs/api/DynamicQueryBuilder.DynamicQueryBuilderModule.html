@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DynamicQueryBuilderModule </title>
+      <title>Class DynamicQueryBuilderModule | DynamicQueryBuilder </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DynamicQueryBuilderModule ">
+      <meta name="title" content="Class DynamicQueryBuilderModule | DynamicQueryBuilder ">
       
       <meta name="description" content="Module for adding Dynamic Query Builder services.">
       <link rel="icon" href="../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/15/merge/apiSpec/new?filename=DynamicQueryBuilder_DynamicQueryBuilderModule.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.DynamicQueryBuilderModule%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/develop/apiSpec/new?filename=DynamicQueryBuilder_DynamicQueryBuilderModule.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.DynamicQueryBuilderModule%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../logo.svg" alt="">
-            
+            <img id="logo" class="svg" src="../../logo.svg" alt="DynamicQueryBuilder">
+            DynamicQueryBuilder
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -89,7 +89,7 @@
 
 
   <h1 id="DynamicQueryBuilder_DynamicQueryBuilderModule" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule" class="text-break">
-Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="
 
   <h3 id="DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings_" data-uid="DynamicQueryBuilder.DynamicQueryBuilderModule.AddDynamicQueryBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection,DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings)">
   AddDynamicQueryBuilder(IServiceCollection, DynamicQueryBuilderSettings)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds Dynamic Query Builder services to the service collection.</p>
@@ -174,14 +174,7 @@ Class DynamicQueryBuilderModule  <a class="header-action link-secondary" title="
     <dd><p>The service collection.</p>
 </dd>
     <dt><code>settings</code> <a class="xref" href="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html">DynamicQueryBuilderSettings</a></dt>
-    <dd><p>A <a class="xref" href="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html">DynamicQueryBuilderSettings</a> object containing the connection string and database driver definition.
-Example usage:</p>
-<pre><code class="lang-csharp">var settings = new DynamicQueryBuilderSettings
-{
-    ConnectionString = "example",
-    Driver = DatabaseDriver.POSTGRESQL
-};
-builder.Services.AddDynamicQueryBuilder(settings);</code></pre>
+    <dd><p>A <a class="xref" href="DynamicQueryBuilder.Models.Helpers.DynamicQueryBuilderSettings.html">DynamicQueryBuilderSettings</a> object containing the connection string and database driver definition.</p>
 </dd>
   </dl>
 
@@ -197,7 +190,31 @@ builder.Services.AddDynamicQueryBuilder(settings);</code></pre>
 
 
 
+  <h4 class="section" id="DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings__examples">Examples</h4>
+  <pre><code class="lang-csharp">using DynamicQueryBuilder;
+using DynamicQueryBuilder.Models.Enums.Helpers.Databases;
+using DynamicQueryBuilder.Models.Helpers;
 
+var builder = WebApplication.CreateBuilder(args);
+
+var settings = new DynamicQueryBuilderSettings(
+    builder.Configuration.GetConnectionString("DynamicQueryBuilder")
+        ?? throw new InvalidOperationException("Connection string 'DynamicQueryBuilder' is missing."),
+    DatabaseDriver.POSTGRESQL);
+
+builder.Services.AddDynamicQueryBuilder(settings);</code></pre>
+
+
+  <h4 class="section" id="DynamicQueryBuilder_DynamicQueryBuilderModule_AddDynamicQueryBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_DynamicQueryBuilder_Models_Helpers_DynamicQueryBuilderSettings__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Registers two scoped services: <a class="xref" href="DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html">IGetDatabaseMetaData</a>, created with <code class="paramref">settings</code>,
+and <a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.html">IQueryBuilderSetup</a>, implemented by <a class="xref" href="DynamicQueryBuilder.Builders.QueryBuilder.html">QueryBuilder</a>.
+<a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.html">IQueryBuilder</a> is not registered; call <a class="xref" href="DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.html#DynamicQueryBuilder_Interfaces_Builders_IQueryBuilderSetup_Setup_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___">Setup(Dictionary&lt;string, List&lt;string&gt;&gt;)</a> to get one.
+<code class="paramref">settings</code> is not validated here: an empty connection string only fails when
+<a class="xref" href="DynamicQueryBuilder.Interfaces.Helpers.IGetDatabaseMetaData.html#DynamicQueryBuilder_Interfaces_Helpers_IGetDatabaseMetaData_GetDatabaseTablesMetaDataAsync">GetDatabaseTablesMetaDataAsync()</a> is called.
+Known issue: <a class="xref" href="DynamicQueryBuilder.Builders.QueryBuilder.html">QueryBuilder</a> keeps the clauses of the query being built, and the scoped
+registration gives every consumer in the same scope (for example, the same HTTP request) the same
+instance, so their clauses are mixed.</p>
+</div>
 
 
 
@@ -206,7 +223,7 @@ builder.Services.AddDynamicQueryBuilder(settings);</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/DynamicQueryBuilderModule.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

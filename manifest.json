@@ -12,26 +12,6 @@
       }
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "COMMERCIAL_LICENSE.md",
-      "output": {
-        ".html": {
-          "relative_path": "COMMERCIAL_LICENSE.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "ManagedReference",
       "source_relative_path": "docs/api/DynamicQueryBuilder.Builders.QueryBuilder.yml",
       "output": {
@@ -127,7 +107,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup",
-      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.yml\" sourcestartlinenumber=\"1\">Provides the initial setup functionality for the dynamic query builder.\nThis interface enforces that the necessary database metadata is provided\nbefore any query construction methods become available.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.yml\" sourcestartlinenumber=\"1\">Provides the initial setup functionality for the dynamic query builder.\n<xref href=\"DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateSql\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"DynamicQueryBuilder.Interfaces.Builders.IQueryBuilder.GenerateFormattedSql\" data-throw-if-not-resolved=\"false\"></xref> require\n<xref href=\"DynamicQueryBuilder.Interfaces.Builders.IQueryBuilderSetup.Setup(System.Collections.Generic.Dictionary%7bSystem.String%2cSystem.Collections.Generic.List%7bSystem.String%7d%7d)\" data-throw-if-not-resolved=\"false\"></xref> to have been called first.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -183,7 +163,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver",
-      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.yml\" sourcestartlinenumber=\"1\">Supported drivers to get tables metadata.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver.yml\" sourcestartlinenumber=\"1\">Database drivers for reading table metadata.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -379,7 +359,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData",
-      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.yml\" sourcestartlinenumber=\"1\">Represents the metadata of a database table, including schema, columns, primary key, and foreign key relationships.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.yml\" sourcestartlinenumber=\"1\">Represents the metadata of one table column, as read from one row of the catalog query returned by\n<xref href=\"DynamicQueryBuilder.Drivers.DriversFactory.GetMetadataQuery(DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver)\" data-throw-if-not-resolved=\"false\"></xref>: name, data type and foreign key\nreference. The schema and table are the keys under which the column is returned.</p>\n"
     },
     {
       "type": "ManagedReference",

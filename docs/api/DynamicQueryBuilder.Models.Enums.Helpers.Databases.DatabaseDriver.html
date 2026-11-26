@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum DatabaseDriver </title>
+      <title>Enum DatabaseDriver | DynamicQueryBuilder </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum DatabaseDriver ">
+      <meta name="title" content="Enum DatabaseDriver | DynamicQueryBuilder ">
       
-      <meta name="description" content="Supported drivers to get tables metadata.">
+      <meta name="description" content="Database drivers for reading table metadata.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/15/merge/apiSpec/new?filename=DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/new/develop/apiSpec/new?filename=DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver.md&amp;value=---%0Auid%3A%20DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../logo.svg" alt="">
-            
+            <img id="logo" class="svg" src="../../logo.svg" alt="DynamicQueryBuilder">
+            DynamicQueryBuilder
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -90,7 +90,7 @@
 
 
   <h1 id="DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver" data-uid="DynamicQueryBuilder.Models.Enums.Helpers.Databases.DatabaseDriver" class="text-break">
-Enum DatabaseDriver  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/src/DynamicQueryBuilder/Models/Enums/Helpers/Databases/DatabaseDriver.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Enum DatabaseDriver  <a class="header-action link-secondary" title="View source" href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Models/Enums/Helpers/Databases/DatabaseDriver.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,7 @@ Enum DatabaseDriver  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>DynamicQueryBuilder.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Supported drivers to get tables metadata.</p>
+  <div class="markdown summary"><p>Database drivers for reading table metadata.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -119,20 +119,28 @@ Enum DatabaseDriver  <a class="header-action link-secondary" title="View source"
   <dl class="parameters">
     <dt id="DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_MYSQL"><code>MYSQL = 1</code></dt>
   
-  <dd><p>MySQL driver.</p>
+  <dd><p>MySQL driver (MySql.Data).
+Known issue: reading metadata with this driver fails. The MySQL catalog query selects <code>TABLE_SCHEMA</code>,
+<code>TABLE_NAME</code> and <code>COLUMN_NAME</code> without a table qualifier although both joined views have these
+columns, so MySQL rejects it with a <code>MySqlException</code>
+(&quot;Column 'TABLE_SCHEMA' in field list is ambiguous&quot;).</p>
 </dd>
     <dt id="DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_POSTGRESQL"><code>POSTGRESQL = 0</code></dt>
   
-  <dd><p>PostgreSQL driver.</p>
+  <dd><p>PostgreSQL driver (Npgsql).</p>
 </dd>
   </dl>
 
 
+  <h2 id="DynamicQueryBuilder_Models_Enums_Helpers_Databases_DatabaseDriver_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The driver selects the connection type and the catalog query used to read metadata.
+It does not affect the SQL produced by the query builder.</p>
+</div>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/src/DynamicQueryBuilder/Models/Enums/Helpers/Databases/DatabaseDriver.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/src/DynamicQueryBuilder/Models/Enums/Helpers/Databases/DatabaseDriver.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

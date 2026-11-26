@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>DynamicQueryBuilder </title>
+      <title>DynamicQueryBuilder | DynamicQueryBuilder </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="DynamicQueryBuilder ">
+      <meta name="title" content="DynamicQueryBuilder | DynamicQueryBuilder ">
       
       
       <link rel="icon" href="favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="logo.svg" alt="">
-            
+            <img id="logo" class="svg" src="logo.svg" alt="DynamicQueryBuilder">
+            DynamicQueryBuilder
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -73,72 +73,85 @@
         <article data-uid="">
 <h1 id="dynamicquerybuilder">DynamicQueryBuilder</h1>
 
-<!-- [![NuGet](https://img.shields.io/nuget/v/DynamicQueryBuilder.svg)](https://www.nuget.org/packages/DynamicQueryBuilder/) -->
-<p><a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL-blue.svg" alt="License"></a></p>
-<p>A powerful and flexible .NET library for building dynamic database queries with support for multiple database providers. DynamicQueryBuilder simplifies the process of creating dynamic queries by providing a type-safe, fluent interface while maintaining clean and maintainable code.</p>
+<p><a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+<a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/LICENSE"><img src="https://img.shields.io/badge/License-AGPL-blue.svg" alt="License"></a></p>
+<p>A .NET library for building SQL <code>SELECT</code> statements with a fluent API, plus a reader that lists the tables and columns of a database.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><strong>Pre-alpha: don't use it in production.</strong></p>
+<ul>
+<li><strong>Not on NuGet.</strong> The library isn't published. The <code>DynamicQueryBuilder</code> package on nuget.org is an unrelated project.</li>
+<li><strong>The API will change.</strong> A rewrite is planned, and nothing here is stable.</li>
+<li><strong>No protection against SQL injection.</strong> Values, identifiers (table and column names), join conditions and operators are concatenated into the SQL text, with no parameters and no escaping. Never pass untrusted input. See the <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/SECURITY.md">security policy</a>.</li>
+<li><strong>Almost no validation.</strong> The only check on names is that the upper-cased <code>FROM</code> table is a key of the map passed to <code>Setup</code>. The column lists in that map are never read, and columns, joined tables, conditions and values aren't checked.</li>
+</ul>
+</div>
 <h2 id="-features">🚀 Features</h2>
 <h3 id="core-features">Core Features</h3>
 <ul>
-<li>Fluent API for building SQL queries dynamically</li>
-<li>Type-safe query building</li>
-<li>Easy integration with dependency injection</li>
-<li>High performance and minimal overhead</li>
-<li>Extensive documentation and examples</li>
+<li>Fluent API that builds one SQL <code>SELECT</code> statement and returns it as a <code>string</code></li>
+<li>Registration with dependency injection through <code>AddDynamicQueryBuilder</code></li>
 </ul>
 <h3 id="database-support">Database Support</h3>
 <ul>
-<li>Multiple database providers:
-<ul>
-<li>PostgreSQL</li>
-<li>MySQL</li>
-<li>More coming soon!</li>
-</ul>
-</li>
+<li>The metadata reader connects to PostgreSQL (Npgsql) or MySQL (MySql.Data). It works with PostgreSQL; with MySQL it currently fails (see Known limitations below).</li>
+<li>The query builder doesn't depend on the database: it emits the same SQL for both.</li>
 </ul>
 <h3 id="query-capabilities">Query Capabilities</h3>
 <ul>
-<li>Comprehensive SQL Operations:
-<ul>
-<li><code>SELECT</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, <code>ORDER BY</code>, and <code>LIMIT</code> clauses</li>
-<li>Various filtering options with AND/OR conditions</li>
+<li><code>SELECT</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, <code>ORDER BY</code> and <code>LIMIT</code> clauses</li>
+<li>Filters joined with <code>AND</code> (<code>FilterBy</code>) or <code>OR</code> (<code>OrFilterBy</code>)</li>
 <li>Generates both <strong>formatted</strong> and <strong>unformatted</strong> SQL queries</li>
 </ul>
-</li>
-</ul>
-<h3 id="rich-sql-operators">Rich SQL Operators</h3>
+<h3 id="sql-operators">SQL Operators</h3>
 <ul>
-<li>🔄 Logical operators (AND, OR, NOT)</li>
-<li>📝 String operators (LIKE, ILIKE, CONCAT)</li>
-<li>🔗 Set operators (UNION, UNION ALL, INTERSECT, EXCEPT)</li>
-<li>📊 Range operators (BETWEEN, NOT BETWEEN)</li>
-<li>📋 Inclusion operators (IN, NOT IN)</li>
-<li>❓ Null operators (IS NULL, IS NOT NULL)</li>
+<li>Comparison operators (<code>=</code>, <code>&lt;&gt;</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>)</li>
+<li>Logical operators (<code>AND</code>, <code>OR</code>)</li>
+<li>String operators (<code>LIKE</code>, <code>ILIKE</code>)</li>
+<li>Range operators (<code>BETWEEN</code>, <code>NOT BETWEEN</code>)</li>
+<li>Inclusion operators (<code>IN</code>, <code>NOT IN</code>)</li>
+<li>Null operators (<code>IS NULL</code>, <code>IS NOT NULL</code>)</li>
+<li>Any other operator, passed as free text</li>
 </ul>
 <h3 id="additional-features">Additional Features</h3>
 <ul>
-<li>📊 Comprehensive database metadata retrieval</li>
-<li>🔒 SQL injection protection</li>
-<li>🎯 Built-in validation mechanisms</li>
+<li>Database metadata reader: the columns of every table the database user can access, grouped by schema and table, with each column's data type and foreign-key target (see Known limitations)</li>
+</ul>
+<h3 id="known-limitations">Known limitations</h3>
+<ul>
+<li>Filters are joined in call order, without parentheses: <code>a AND b OR c</code> is evaluated as <code>(a AND b) OR c</code>.</li>
+<li>The builder ignores the database driver, which only the metadata reader uses. It emits <code>ILIKE</code> and <code>FULL JOIN</code> for MySQL too, but MySQL has neither: <code>ILIKE</code> is a syntax error, and <code>FULL</code> is read as an alias for the <code>FROM</code> table, so the join either fails or runs as a plain join.</li>
+<li><code>FromTable</code> upper-cases the table name using the current culture and emits it unquoted. PostgreSQL folds it back to lower case, so <code>FROM USERS</code> finds <code>users</code> but not a table created as <code>&quot;Users&quot;</code>. MySQL on Linux compares table names case-sensitively by default, so <code>FROM USERS</code> doesn't find <code>users</code>. There's no dedicated support for <code>schema.table</code> or aliases: free text such as <code>FromTable(&quot;public.users&quot;)</code> works only if the <code>Setup</code> map has the upper-cased string (<code>&quot;PUBLIC.USERS&quot;</code>) as a key.</li>
+<li><code>JoinOperators.CROSS_JOIN</code> always adds an <code>ON</code> clause, which PostgreSQL rejects. <code>JoinOperators.SELF_JOIN</code> emits <code>SELF JOIN</code>, which isn't a join type: the database reads <code>SELF</code> as an alias for the <code>FROM</code> table, so the join fails if the condition names that table and otherwise runs as a plain join.</li>
+<li><code>FilterBy</code> and <code>OrFilterBy</code> accept <code>StringOperators.CONCAT</code> but always throw <code>ArgumentOutOfRangeException</code> for it. <code>SetOperators</code>, <code>ArithmeticOperators</code> and <code>LogicalOperators.NOT</code> exist, but no builder method uses them.</li>
+<li>With MySQL the metadata reader fails: its catalog query throws <code>Column 'TABLE_SCHEMA' in field list is ambiguous</code>.</li>
+<li>Despite its name, the reader's <code>PrimaryKey</code> field doesn't tell you whether a column is part of the primary key. On PostgreSQL it holds the column's default expression.</li>
+<li>On PostgreSQL the foreign-key fields are <code>null</code> unless the connecting role owns the tables, even if it has every table privilege: <code>information_schema.constraint_column_usage</code> only shows tables owned by a currently enabled role.</li>
+<li>Columns in a composite foreign key, or in more than one foreign key, come back once per target column, including wrong pairings: with a two-column key, each column is paired with both target columns.</li>
+<li>The reader returns schema → table → columns, in the database's own casing. That isn't the shape <code>Setup</code> takes, so you build the <code>Setup</code> map yourself.</li>
 </ul>
 <h2 id="-documentation">📚 Documentation</h2>
-<p>For detailed documentation, examples, and API reference, visit our <a href="docs/">documentation site</a>.</p>
+<p><a href="docs/getting-started.html">Getting started</a> shows how to try the library from a clone of the repository, register it and build queries. The <a class="xref" href="docs/api/DynamicQueryBuilder.Builders.QueryBuilder.html">API reference</a> is generated from the source code.</p>
 <h2 id="-examples">💡 Examples</h2>
-<p>Check out the <a href="examples/">examples</a> directory for complete working examples:</p>
+<p>The repository's <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/tree/develop/examples">examples</a> folder has two projects. Both are part of <code>DynamicQueryBuilder.sln</code> and reference the library project directly. See <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/examples/README.md">examples/README.md</a> for how to run them.</p>
 <ul>
-<li><code>ClientWebAPI</code>: A sample Web API project demonstrating integration</li>
-<li><code>ConsoleClient</code>: A console application showing basic usage</li>
+<li><code>ClientWebAPI</code>: an ASP.NET Core API that returns the metadata reader's output over HTTP. It has no authentication, so run it locally only. It needs a PostgreSQL connection string under <code>ConnectionStrings:DynamicQueryBuilder</code>: run <code>dotnet user-secrets set &quot;ConnectionStrings:DynamicQueryBuilder&quot; &quot;&lt;value&gt;&quot;</code> in <code>examples/ClientWebAPI/ClientWebAPI</code>, or set the <code>ConnectionStrings__DynamicQueryBuilder</code> environment variable. Without it, the app stops at startup.</li>
+<li><code>ConsoleClient</code>: a placeholder that prints &quot;Hello, World!&quot;. It doesn't use the library yet.</li>
 </ul>
 <h2 id="-roadmap">✅ Roadmap</h2>
+<p>A rewrite of the core is planned before the first release. It covers:</p>
 <ul>
-<li>[ ] Add support for more database providers</li>
-<li>[ ] Enhance SQL injection protection mechanisms</li>
-<li>[ ] Add support for parameterized queries</li>
-<li>[ ] Extend documentation with more advanced examples</li>
-<li>[ ] Create comprehensive unit test suite</li>
-<li>[ ] Add validation for column names</li>
-<li>[ ] Implement caching mechanisms for better performance</li>
-<li>[ ] Add support for stored procedures</li>
+<li>[ ] A core that only generates SQL and its parameters: values sent as parameters, never as text</li>
+<li>[ ] Quoted identifiers, <code>schema.table</code> and aliases</li>
+<li>[ ] Grouped conditions: <code>AND</code>, <code>OR</code> and <code>NOT</code> with parentheses</li>
+<li>[ ] SQL generated for each database, starting with PostgreSQL and MySQL</li>
+<li>[ ] Every table and column checked against the schema read from the database</li>
+<li>[ ] Working metadata readers: real primary keys, composite foreign keys and a MySQL query that runs</li>
+<li>[ ] Tests that run the generated SQL against real databases</li>
+<li>[ ] More documentation and complete examples</li>
+<li>[ ] A first pre-release on NuGet, under a different package ID</li>
+<li>[ ] SQL Server support before 1.0</li>
+<li>[ ] Target frameworks <code>net10.0</code> and <code>net8.0</code>, plus <code>netstandard2.0</code> for the core</li>
 </ul>
 <h2 id="-contributing">🤝 Contributing</h2>
 <p>Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.</p>
@@ -151,7 +164,7 @@
 <h2 id="-support">💬 Support</h2>
 <p>If you need help or have questions:</p>
 <ul>
-<li>📚 Check the <a href="docs/">documentation</a></li>
+<li>📚 Check the <a href="docs/getting-started.html">getting started guide</a></li>
 <li>🐛 Report issues on <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/issues">GitHub Issues</a></li>
 <li>💬 Join the discussion in <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/discussions">GitHub Discussions</a></li>
 </ul>
@@ -163,7 +176,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/15/merge/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gabriel-sisjr/DynamicQueryBuilder/blob/develop/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
