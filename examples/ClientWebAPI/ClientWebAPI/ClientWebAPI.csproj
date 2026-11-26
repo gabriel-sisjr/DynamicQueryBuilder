@@ -4,11 +4,15 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>13d70544-964d-42ee-acb0-8e0828868425</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="DynamicQueryBuilder" Version="0.0.0.6" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../../src/DynamicQueryBuilder/DynamicQueryBuilder.csproj" />
     </ItemGroup>
 
 </Project>
