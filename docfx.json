@@ -14,8 +14,7 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.{md,yml}"],
-        "exclude": ["_site/**", "node_modules/**"]
+        "files": ["index.md", "toc.yml", "docs/**/*.{md,yml}"]
       }
     ],
     "resource": [
@@ -26,10 +25,9 @@
     "output": "_site",
     "template": ["default", "modern"],
     "globalMetadata": {
-      "_appName": "",
-      "_appTitle": "",
-      "_enableSearch": true,
-      "pdf": true
+      "_appName": "DynamicQueryBuilder",
+      "_appTitle": "DynamicQueryBuilder",
+      "_enableSearch": true
     }
   }
 }

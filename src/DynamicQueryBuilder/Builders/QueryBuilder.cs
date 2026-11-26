@@ -7,6 +7,12 @@ namespace DynamicQueryBuilder.Builders;
 /// <summary>
 ///     Implements the IQueryBuilder interface to build SQL queries fluently.
 /// </summary>
+/// <remarks>
+///     An instance accumulates the clauses of one query and is not thread-safe.
+///     It can be obtained with <see cref="Create" />, with <c>new QueryBuilder()</c>, or by resolving
+///     <see cref="IQueryBuilderSetup" /> after <c>AddDynamicQueryBuilder</c>.
+///     See <see cref="IQueryBuilder" /> for how the SQL is assembled.
+/// </remarks>
 public partial class QueryBuilder : IQueryBuilderSetup, IQueryBuilder
 {
     private readonly List<string> _columns = [];
@@ -178,9 +184,9 @@ public partial class QueryBuilder : IQueryBuilderSetup, IQueryBuilder
     }
 
     /// <summary>
-    ///     Factory method to start the builder.
+    ///     Factory method to start the builder. Equivalent to <c>new QueryBuilder()</c>.
     /// </summary>
-    /// <returns>A <see cref="QueryBuilder" /> stance.</returns>
+    /// <returns>A new <see cref="QueryBuilder" /> instance, as <see cref="IQueryBuilderSetup" />.</returns>
     public static IQueryBuilderSetup Create()
     {
         return new QueryBuilder();

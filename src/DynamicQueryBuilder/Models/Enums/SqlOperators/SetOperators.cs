@@ -3,6 +3,7 @@ namespace DynamicQueryBuilder.Models.Enums.SqlOperators;
 /// <summary>
 ///     Represents SQL set operators.
 /// </summary>
+/// <remarks>Not used by the query builder yet: no method accepts these values.</remarks>
 public enum SetOperators
 {
     /// <summary>UNION - Combines and returns distinct results from two queries</summary>

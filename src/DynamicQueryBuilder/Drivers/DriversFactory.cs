@@ -15,7 +15,17 @@ public static class DriversFactory
     /// </summary>
     /// <param name="driver">The database driver.</param>
     /// <param name="connectionString">The connection string.</param>
-    /// <returns>A database connection.</returns>
+    /// <returns>
+    ///     A new connection that is not opened yet: an <see cref="Npgsql.NpgsqlConnection"/> for
+    ///     <see cref="DatabaseDriver.POSTGRESQL"/> or a <see cref="MySql.Data.MySqlClient.MySqlConnection"/> for
+    ///     <see cref="DatabaseDriver.MYSQL"/>. The caller opens and disposes it.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">Thrown when <paramref name="connectionString"/> is null.</exception>
+    /// <exception cref="ArgumentException">
+    ///     Thrown when <paramref name="connectionString"/> is empty or whitespace, or by the driver's connection
+    ///     constructor when it is malformed.
+    /// </exception>
+    /// <exception cref="NotSupportedException">Thrown when <paramref name="driver"/> is not supported.</exception>
     public static IDbConnection GetDatabaseConnection(DatabaseDriver driver, string connectionString)
     {
         ArgumentNullException.ThrowIfNull(connectionString);
@@ -35,7 +45,12 @@ public static class DriversFactory
     ///     Get the metadata query for a database driver.
     /// </summary>
     /// <param name="driver">The database driver.</param>
-    /// <returns>The metadata query.</returns>
+    /// <returns>
+    ///     The SQL text of the catalog query. Its eight columns are read by position: schema, table, column,
+    ///     data type, the value mapped to <see cref="DynamicQueryBuilder.Models.Helpers.DatabaseTablesMetaData.PrimaryKey"/>,
+    ///     and the related schema, table and column of a foreign key.
+    /// </returns>
+    /// <exception cref="NotSupportedException">Thrown when <paramref name="driver"/> is not supported.</exception>
     public static string GetMetadataQuery(DatabaseDriver driver)
     {
         return driver switch

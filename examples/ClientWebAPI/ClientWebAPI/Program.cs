@@ -10,8 +10,18 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-var settings = new DynamicQueryBuilderSettings(builder.Configuration.GetConnectionString("DynamicQueryBuilder")!,
-    DatabaseDriver.POSTGRESQL);
+var connectionString = builder.Configuration.GetConnectionString("DynamicQueryBuilder");
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException(
+        "The connection string 'ConnectionStrings:DynamicQueryBuilder' is not set. Set it with " +
+        "'dotnet user-secrets set \"ConnectionStrings:DynamicQueryBuilder\" \"<value>\"' " +
+        "run in examples/ClientWebAPI/ClientWebAPI (user secrets are loaded only in the Development environment), " +
+        "or with the environment variable 'ConnectionStrings__DynamicQueryBuilder'. " +
+        "See examples/README.md for forms that keep the value out of shell history.");
+}
+
+var settings = new DynamicQueryBuilderSettings(connectionString, DatabaseDriver.POSTGRESQL);
 builder.Services.AddDynamicQueryBuilder(settings);
 
 var app = builder.Build();
