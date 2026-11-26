@@ -3,9 +3,6 @@ using DynamicQueryBuilder.Models.Enums.SqlOperators;
 
 namespace DynamicQueryBuilder.Builders;
 
-/// <summary>
-///     Implements the IQueryBuilder interface to build SQL queries fluently.
-/// </summary>
 public partial class QueryBuilder
 {
     /// <inheritdoc />

@@ -20,12 +20,24 @@ public enum JoinOperators
     /// </summary>
     RIGHT_JOIN = 2,
 
-    /// <summary>FULL JOIN (or FULL OUTER JOIN) - Returns all records from both tables, with matching records when available</summary>
+    /// <summary>
+    ///     FULL JOIN (or FULL OUTER JOIN) - Returns all records from both tables, with matching records when available.
+    ///     MySQL has no FULL JOIN: it reads the emitted text as an alias (<c>FULL</c>) plus a plain join, or fails.
+    /// </summary>
     FULL_JOIN = 3,
 
-    /// <summary>CROSS JOIN - Produces a Cartesian product of the tables</summary>
+    /// <summary>
+    ///     CROSS JOIN - Intended to produce a Cartesian product of the tables.
+    ///     Known issue: the builder always emits it with an ON clause, which standard SQL does not allow for a
+    ///     cross join, so the generated SQL is not a plain cross join.
+    /// </summary>
     CROSS_JOIN = 4,
 
-    /// <summary>SELF JOIN - Joins a table with itself</summary>
+    /// <summary>
+    ///     SELF JOIN - Intended to join a table with itself.
+    ///     Known issue: the builder emits the text <c>SELF JOIN</c>, which is not an SQL join type. PostgreSQL and
+    ///     MySQL read <c>SELF</c> as an alias for the FROM table, so the query fails when the condition names the FROM
+    ///     table and otherwise runs as a plain inner join.
+    /// </summary>
     SELF_JOIN = 5
 }

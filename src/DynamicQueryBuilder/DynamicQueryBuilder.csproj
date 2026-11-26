@@ -8,21 +8,7 @@
         <Authors>Gabriel Santana</Authors>
         <RepositoryUrl>https://github.com/gabriel-sisjr/DynamicQueryBuilder</RepositoryUrl>
         <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <DocumentationFile>bin\Debug\net8.0\DynamicQueryBuilder.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <DocumentationFile>bin\Debug\net9.0\DynamicQueryBuilder.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <NoWarn>1591</NoWarn>
-        <NoWarn>CS1570</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>

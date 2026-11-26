@@ -8,22 +8,18 @@ public enum ComparisonOperators
     /// <summary>Equal (=)</summary>
     EQUAL = 0,
 
-    /// <summary>
-    ///     Not Equal (<> or !=)
-    /// </summary>
+    /// <summary>Not equal (&lt;&gt;)</summary>
     NOT_EQUAL = 1,
 
-    /// <summary>Greater than (>)</summary>
+    /// <summary>Greater than (&gt;)</summary>
     GREATER_THAN = 2,
 
-    /// <summary>
-    ///     Less than (<)</summary>
+    /// <summary>Less than (&lt;)</summary>
     LESS_THAN = 3,
 
-    /// <summary>Greater than or equal to (>=)</summary>
+    /// <summary>Greater than or equal to (&gt;=)</summary>
     GREATER_OR_EQUAL = 4,
 
-    /// <summary>
-    ///     Less than or equal to (<=)</summary>
+    /// <summary>Less than or equal to (&lt;=)</summary>
     LESS_OR_EQUAL = 5
 }
