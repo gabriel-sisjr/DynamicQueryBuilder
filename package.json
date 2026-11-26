@@ -1,8 +1,8 @@
 {
   "devDependencies": {
-    "@commitlint/config-conventional": "^19.7.1",
-    "commitizen": "^4.3.1",
-    "commitlint": "^19.7.1",
+    "@commitlint/config-conventional": "^21.2.4",
+    "commitizen": "^4.3.2",
+    "commitlint": "^21.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7",
     "standard-version": "^9.5.0"
