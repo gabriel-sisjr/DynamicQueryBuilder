@@ -1,0 +1,67 @@
+# Dependabot version updates. Minor and patch updates are grouped into one pull
+# request per ecosystem; major updates arrive as separate pull requests.
+#
+# Titles follow the commit convention: "chore(deps): bump ..." (npm
+# devDependencies: "chore(deps-dev): bump ..."). commitlint's subject-case rule
+# rejects "Bump", and two things can produce it:
+# - the NuGet updater ignores `include: scope` and always writes "Bump", so its
+#   scope lives in the prefix and its titles need a lowercase "bump" when
+#   squash-merging;
+# - the npm and Actions updaters copy the casing of the last Dependabot commit
+#   on the default branch, so one squash-merged "Bump" switches them to "Bump".
+version: 2
+updates:
+  # The root solution references src, tests and examples, and the same updater
+  # also reads the local tool manifest (.config/dotnet-tools.json, which pins docfx).
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      nuget-minor-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+  # Commit tooling only (commitlint, husky); nothing here ships with the library.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      npm-minor-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+  # Workflows pin actions by commit SHA with a "# vX.Y.Z" comment; Dependabot
+  # updates both.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      actions-minor-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
